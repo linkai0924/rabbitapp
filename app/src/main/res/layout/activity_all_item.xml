@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <include
+        layout="@layout/include_title_bar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/include_title_bar" />
+        android:layout_height="wrap_content" />
 
     <ExpandableListView
         android:id="@+id/expandableListView"
@@ -23,7 +23,6 @@
         android:fadingEdge="none"
         android:footerDividersEnabled="false"
         android:groupIndicator="@null"
-        android:listSelector="@android:color/transparent" >
-    </ExpandableListView>
+        android:listSelector="@android:color/transparent"></ExpandableListView>
 
 </LinearLayout>

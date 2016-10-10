@@ -2,23 +2,23 @@ package com.means.rabbit.bean;
 
 public class CityEB {
 
-	public String catid;
-	public String cityname;
+    public String catid;
+    public String cityname;
 
-	public String getCatid() {
-		return catid;
-	}
+    public String getCatid() {
+        return catid;
+    }
 
-	public void setCatid(String catid) {
-		this.catid = catid;
-	}
+    public void setCatid(String catid) {
+        this.catid = catid;
+    }
 
-	public String getCityname() {
-		return cityname;
-	}
+    public String getCityname() {
+        return cityname;
+    }
 
-	public void setCityname(String cityname) {
-		this.cityname = cityname;
-	}
+    public void setCityname(String cityname) {
+        this.cityname = cityname;
+    }
 
 }

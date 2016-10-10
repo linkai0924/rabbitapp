@@ -1,19 +1,8 @@
 package net.duohuo.dhroid.net;
 
-import java.io.IOException;
-import java.net.Socket;
-import java.net.UnknownHostException;
-import java.security.KeyManagementException;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.UnrecoverableKeyException;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
-
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
+import android.content.Context;
+import android.net.Proxy;
+import android.text.TextUtils;
 
 import net.duohuo.dhroid.util.NetworkUtils;
 
@@ -50,233 +39,241 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.params.HttpProtocolParams;
 
-import android.content.Context;
-import android.net.Proxy;
-import android.text.TextUtils;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.security.KeyManagementException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 public class HttpManager {
 
-	private static final int DEFAULT_MAX_CONNECTIONS = 30;
-	public static final int DEFAULT_SOCKET_TIMEOUT = 30 * 1000;
+    public static final int DEFAULT_SOCKET_TIMEOUT = 30 * 1000;
+    public static final int DEFAULT_SOCKET_TIMEOUT_SHORT = 10 * 1000;
+    final static HttpParams httpParams = new BasicHttpParams();
+    private static final int DEFAULT_MAX_CONNECTIONS = 30;
+    private static final int DEFAULT_SOCKET_BUFFER_SIZE = 8192;
+    private static DefaultHttpClient sHttpClient;
 
-	public static final int DEFAULT_SOCKET_TIMEOUT_SHORT = 10 * 1000;
+    static {
+        ConnManagerParams.setTimeout(httpParams, 1000);
+        ConnManagerParams.setMaxConnectionsPerRoute(httpParams,
+                new ConnPerRouteBean(10));
+        ConnManagerParams.setMaxTotalConnections(httpParams,
+                DEFAULT_MAX_CONNECTIONS);
+        HttpProtocolParams.setVersion(httpParams, HttpVersion.HTTP_1_1);
+        HttpProtocolParams.setContentCharset(httpParams, "UTF-8");
+        HttpConnectionParams.setStaleCheckingEnabled(httpParams, false);
+        HttpClientParams.setRedirecting(httpParams, false);
+        HttpProtocolParams.setUserAgent(httpParams, "Android client");
+        HttpConnectionParams.setSoTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT);
+        HttpConnectionParams.setConnectionTimeout(httpParams,
+                DEFAULT_SOCKET_TIMEOUT);
+        HttpConnectionParams.setTcpNoDelay(httpParams, true);
+        HttpConnectionParams.setSocketBufferSize(httpParams,
+                DEFAULT_SOCKET_BUFFER_SIZE);
 
-	private static final int DEFAULT_SOCKET_BUFFER_SIZE = 8192;
+        SchemeRegistry schemeRegistry = new SchemeRegistry();
+        schemeRegistry.register(new Scheme("http", PlainSocketFactory
+                .getSocketFactory(), 80));
+        try {
+            KeyStore trustStore = KeyStore.getInstance(KeyStore
+                    .getDefaultType());
+            trustStore.load(null, null);
+            SSLSocketFactory sf = new MySSLSocketFactory(trustStore);
+            sf.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+            schemeRegistry.register(new Scheme("https", sf, 443));
+        } catch (Exception ex) {
+        }
 
-	private static DefaultHttpClient sHttpClient;
+        ClientConnectionManager manager = new ThreadSafeClientConnManager(
+                httpParams, schemeRegistry);
+        sHttpClient = new DefaultHttpClient(manager, httpParams);
+        CookieStore cookieStore = new BasicCookieStore();
+        sHttpClient.setCookieStore(cookieStore);
+        CookieSpecFactory csf = new CookieSpecFactory() {
+            public CookieSpec newInstance(HttpParams params) {
+                return new BrowserCompatSpec() {
+                    @Override
+                    public void validate(Cookie cookie, CookieOrigin origin)
+                            throws MalformedCookieException {
 
-	final static HttpParams httpParams = new BasicHttpParams();
-	static {
-		ConnManagerParams.setTimeout(httpParams, 1000);
-		ConnManagerParams.setMaxConnectionsPerRoute(httpParams,
-				new ConnPerRouteBean(10));
-		ConnManagerParams.setMaxTotalConnections(httpParams,
-				DEFAULT_MAX_CONNECTIONS);
-		HttpProtocolParams.setVersion(httpParams, HttpVersion.HTTP_1_1);
-		HttpProtocolParams.setContentCharset(httpParams, "UTF-8");
-		HttpConnectionParams.setStaleCheckingEnabled(httpParams, false);
-		HttpClientParams.setRedirecting(httpParams, false);
-		HttpProtocolParams.setUserAgent(httpParams, "Android client");
-		HttpConnectionParams.setSoTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT);
-		HttpConnectionParams.setConnectionTimeout(httpParams,
-				DEFAULT_SOCKET_TIMEOUT);
-		HttpConnectionParams.setTcpNoDelay(httpParams, true);
-		HttpConnectionParams.setSocketBufferSize(httpParams,
-				DEFAULT_SOCKET_BUFFER_SIZE);
+                    }
+                };
+            }
+        };
+        sHttpClient.getCookieSpecs().register("oschina", csf);
+        sHttpClient.getParams().setParameter(ClientPNames.COOKIE_POLICY,
+                "oschina");
+        sHttpClient.getParams().setParameter(
+                CookieSpecPNames.SINGLE_COOKIE_HEADER, true);
+    }
 
-		SchemeRegistry schemeRegistry = new SchemeRegistry();
-		schemeRegistry.register(new Scheme("http", PlainSocketFactory
-				.getSocketFactory(), 80));
-		try {
-			KeyStore trustStore = KeyStore.getInstance(KeyStore
-					.getDefaultType());
-			trustStore.load(null, null);
-			SSLSocketFactory sf = new MySSLSocketFactory(trustStore);
-			sf.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-			schemeRegistry.register(new Scheme("https", sf, 443));
-		} catch (Exception ex) {
-		}
+    private HttpManager() {
+    }
 
-		ClientConnectionManager manager = new ThreadSafeClientConnManager(
-				httpParams, schemeRegistry);
-		sHttpClient = new DefaultHttpClient(manager, httpParams);
-		CookieStore cookieStore = new BasicCookieStore();
-		sHttpClient.setCookieStore(cookieStore);
-		CookieSpecFactory csf = new CookieSpecFactory() {
-			public CookieSpec newInstance(HttpParams params) {
-				return new BrowserCompatSpec() {
-					@Override
-					public void validate(Cookie cookie, CookieOrigin origin)
-							throws MalformedCookieException {
+    public static void longTimeOut() {
+        HttpConnectionParams.setSoTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT);
+        HttpConnectionParams.setConnectionTimeout(httpParams,
+                DEFAULT_SOCKET_TIMEOUT);
+        ConnManagerParams.setTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT);
+    }
 
-					}
-				};
-			}
-		};
-		sHttpClient.getCookieSpecs().register("oschina", csf);
-		sHttpClient.getParams().setParameter(ClientPNames.COOKIE_POLICY,
-				"oschina");
-		sHttpClient.getParams().setParameter(
-				CookieSpecPNames.SINGLE_COOKIE_HEADER, true);
-	}
+    public static void shortTimeOut() {
+        HttpConnectionParams.setSoTimeout(httpParams,
+                DEFAULT_SOCKET_TIMEOUT_SHORT);
+        HttpConnectionParams.setConnectionTimeout(httpParams,
+                DEFAULT_SOCKET_TIMEOUT_SHORT);
+        ConnManagerParams.setTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT_SHORT);
+    }
 
-	public static void longTimeOut() {
-		HttpConnectionParams.setSoTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT);
-		HttpConnectionParams.setConnectionTimeout(httpParams,
-				DEFAULT_SOCKET_TIMEOUT);
-		ConnManagerParams.setTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT);
-	}
+    public static CookieStore getCookieStore() {
+        return sHttpClient.getCookieStore();
+    }
 
-	public static void shortTimeOut() {
-		HttpConnectionParams.setSoTimeout(httpParams,
-				DEFAULT_SOCKET_TIMEOUT_SHORT);
-		HttpConnectionParams.setConnectionTimeout(httpParams,
-				DEFAULT_SOCKET_TIMEOUT_SHORT);
-		ConnManagerParams.setTimeout(httpParams, DEFAULT_SOCKET_TIMEOUT_SHORT);
-	}
+    public static HttpResponse execute(HttpGet get) throws IOException {
+        System.out.println("-------------HttpManager get-------------");
+        return sHttpClient.execute(get);
+    }
 
-	public static CookieStore getCookieStore() {
-		return sHttpClient.getCookieStore();
-	}
+    public static HttpResponse execute(HttpPost post) throws IOException {
+        System.out.println("-------------HttpManager post-------------");
+        return sHttpClient.execute(post);
+    }
 
-	private HttpManager() {
-	}
+    public static HttpResponse execute(HttpUriRequest post) throws IOException {
+        System.out
+                .println("-------------HttpManager HttpUriRequest post-------------");
+        return sHttpClient.execute(post);
+    }
 
-	public static HttpResponse execute(HttpGet get) throws IOException {
-		System.out.println("-------------HttpManager get-------------");
-		return sHttpClient.execute(get);
-	}
+    public static HttpResponse execute(HttpHead head) throws IOException {
+        return sHttpClient.execute(head);
+    }
 
-	public static HttpResponse execute(HttpPost post) throws IOException {
-		System.out.println("-------------HttpManager post-------------");
-		return sHttpClient.execute(post);
-	}
+    public static HttpResponse executeHost(HttpHost host, HttpGet get)
+            throws IOException {
+        return sHttpClient.execute(host, get);
+    }
 
-	public static HttpResponse execute(HttpUriRequest post) throws IOException {
-		System.out
-				.println("-------------HttpManager HttpUriRequest post-------------");
-		return sHttpClient.execute(post);
-	}
+    public static HttpResponse execute(Context context, HttpGet get)
+            throws IOException {
+        if (!NetworkUtils.isNetworkAvailable() && isWapNetwork()) {
+            setWapProxy();
+            return sHttpClient.execute(get);
+        }
 
-	public static HttpResponse execute(HttpHead head) throws IOException {
-		return sHttpClient.execute(head);
-	}
+        final HttpHost host = (HttpHost) sHttpClient.getParams().getParameter(
+                ConnRouteParams.DEFAULT_PROXY);
+        if (host != null) {
+            sHttpClient.getParams().removeParameter(
+                    ConnRouteParams.DEFAULT_PROXY);
+        }
 
-	public static HttpResponse executeHost(HttpHost host, HttpGet get)
-			throws IOException {
-		return sHttpClient.execute(host, get);
-	}
+        return sHttpClient.execute(get);
+    }
 
-	public static HttpResponse execute(Context context, HttpGet get)
-			throws IOException {
-		if (!NetworkUtils.isNetworkAvailable() && isWapNetwork()) {
-			setWapProxy();
-			return sHttpClient.execute(get);
-		}
+    private static void setSinaWapProxy() {
+        final HttpHost para = (HttpHost) sHttpClient.getParams().getParameter(
+                ConnRouteParams.DEFAULT_PROXY);
+        if (para != null) {
+            sHttpClient.getParams().removeParameter(
+                    ConnRouteParams.DEFAULT_PROXY);
+        }
+        String host = Proxy.getDefaultHost();
+        int port = Proxy.getDefaultPort();
+        HttpHost httpHost = new HttpHost(host, port);
+        HttpParams httpParams = new BasicHttpParams();
+        httpParams.setParameter(ConnRouteParams.DEFAULT_PROXY, httpHost);
+    }
 
-		final HttpHost host = (HttpHost) sHttpClient.getParams().getParameter(
-				ConnRouteParams.DEFAULT_PROXY);
-		if (host != null) {
-			sHttpClient.getParams().removeParameter(
-					ConnRouteParams.DEFAULT_PROXY);
-		}
+    public static HttpResponse execute(Context context, HttpUriRequest post)
 
-		return sHttpClient.execute(get);
-	}
+            throws IOException {
+        if (!NetworkUtils.isNetworkAvailable() && isWapNetwork()) {
+            setSinaWapProxy();
 
-	private static void setSinaWapProxy() {
-		final HttpHost para = (HttpHost) sHttpClient.getParams().getParameter(
-				ConnRouteParams.DEFAULT_PROXY);
-		if (para != null) {
-			sHttpClient.getParams().removeParameter(
-					ConnRouteParams.DEFAULT_PROXY);
-		}
-		String host = Proxy.getDefaultHost();
-		int port = Proxy.getDefaultPort();
-		HttpHost httpHost = new HttpHost(host, port);
-		HttpParams httpParams = new BasicHttpParams();
-		httpParams.setParameter(ConnRouteParams.DEFAULT_PROXY, httpHost);
-	}
+        }
+        return sHttpClient.execute(post);
+    }
 
-	public static HttpResponse execute(Context context, HttpUriRequest post)
+    public static HttpResponse execute(Context context, HttpPost post)
+            throws IOException {
+        if (!NetworkUtils.isNetworkAvailable() && isWapNetwork()) {
+            setWapProxy();
+            return sHttpClient.execute(post);
+        }
 
-	throws IOException {
-		if (!NetworkUtils.isNetworkAvailable() && isWapNetwork()) {
-			setSinaWapProxy();
+        final HttpHost host = (HttpHost) sHttpClient.getParams().getParameter(
+                ConnRouteParams.DEFAULT_PROXY);
+        if (host != null) {
+            sHttpClient.getParams().removeParameter(
+                    ConnRouteParams.DEFAULT_PROXY);
+        }
+        return sHttpClient.execute(post);
+    }
 
-		}
-		return sHttpClient.execute(post);
-	}
+    private static boolean isWapNetwork() {
+        final String proxyHost = android.net.Proxy.getDefaultHost();
+        return !TextUtils.isEmpty(proxyHost);
+    }
 
-	public static HttpResponse execute(Context context, HttpPost post)
-			throws IOException {
-		if (!NetworkUtils.isNetworkAvailable() && isWapNetwork()) {
-			setWapProxy();
-			return sHttpClient.execute(post);
-		}
+    private static void setWapProxy() {
+        final HttpHost host = (HttpHost) sHttpClient.getParams().getParameter(
+                ConnRouteParams.DEFAULT_PROXY);
+        if (host == null) {
+            final String host1 = Proxy.getDefaultHost();
+            int port = Proxy.getDefaultPort();
+            HttpHost httpHost = new HttpHost(host1, port);
+            sHttpClient.getParams().setParameter(ConnRouteParams.DEFAULT_PROXY,
+                    httpHost);
+        }
+    }
 
-		final HttpHost host = (HttpHost) sHttpClient.getParams().getParameter(
-				ConnRouteParams.DEFAULT_PROXY);
-		if (host != null) {
-			sHttpClient.getParams().removeParameter(
-					ConnRouteParams.DEFAULT_PROXY);
-		}
-		return sHttpClient.execute(post);
-	}
+    private static class MySSLSocketFactory extends SSLSocketFactory {
+        SSLContext sslContext = SSLContext.getInstance("TLS");
 
-	private static boolean isWapNetwork() {
-		final String proxyHost = android.net.Proxy.getDefaultHost();
-		return !TextUtils.isEmpty(proxyHost);
-	}
+        public MySSLSocketFactory(KeyStore truststore)
+                throws NoSuchAlgorithmException, KeyManagementException,
+                KeyStoreException, UnrecoverableKeyException {
+            super(truststore);
 
-	private static void setWapProxy() {
-		final HttpHost host = (HttpHost) sHttpClient.getParams().getParameter(
-				ConnRouteParams.DEFAULT_PROXY);
-		if (host == null) {
-			final String host1 = Proxy.getDefaultHost();
-			int port = Proxy.getDefaultPort();
-			HttpHost httpHost = new HttpHost(host1, port);
-			sHttpClient.getParams().setParameter(ConnRouteParams.DEFAULT_PROXY,
-					httpHost);
-		}
-	}
+            TrustManager tm = new X509TrustManager() {
 
-	private static class MySSLSocketFactory extends SSLSocketFactory {
-		SSLContext sslContext = SSLContext.getInstance("TLS");
+                public void checkClientTrusted(X509Certificate[] chain,
+                                               String authType) throws CertificateException {
+                }
 
-		public MySSLSocketFactory(KeyStore truststore)
-				throws NoSuchAlgorithmException, KeyManagementException,
-				KeyStoreException, UnrecoverableKeyException {
-			super(truststore);
+                public void checkServerTrusted(X509Certificate[] chain,
+                                               String authType) throws CertificateException {
+                }
 
-			TrustManager tm = new X509TrustManager() {
+                public X509Certificate[] getAcceptedIssuers() {
+                    return null;
+                }
+            };
 
-				public void checkClientTrusted(X509Certificate[] chain,
-						String authType) throws CertificateException {
-				}
+            sslContext.init(null, new TrustManager[]{tm}, null);
+        }
 
-				public void checkServerTrusted(X509Certificate[] chain,
-						String authType) throws CertificateException {
-				}
+        @Override
+        public Socket createSocket(Socket socket, String host, int port,
+                                   boolean autoClose) throws IOException, UnknownHostException {
+            return sslContext.getSocketFactory().createSocket(socket, host,
+                    port, autoClose);
+        }
 
-				public X509Certificate[] getAcceptedIssuers() {
-					return null;
-				}
-			};
-
-			sslContext.init(null, new TrustManager[] { tm }, null);
-		}
-
-		@Override
-		public Socket createSocket(Socket socket, String host, int port,
-				boolean autoClose) throws IOException, UnknownHostException {
-			return sslContext.getSocketFactory().createSocket(socket, host,
-					port, autoClose);
-		}
-
-		@Override
-		public Socket createSocket() throws IOException {
-			return sslContext.getSocketFactory().createSocket();
-		}
-	}
+        @Override
+        public Socket createSocket() throws IOException {
+            return sslContext.getSocketFactory().createSocket();
+        }
+    }
 }

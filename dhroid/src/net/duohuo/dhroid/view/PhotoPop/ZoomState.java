@@ -10,7 +10,7 @@ public class ZoomState extends Observable {
     /**
      * Zoom level A value of 1.0 means the content fits the view.
      */
-    private float mZoom =1f;
+    private float mZoom = 1f;
 
     /**
      * Pan position x-coordinate X-coordinate of zoom window center position,
@@ -28,7 +28,7 @@ public class ZoomState extends Observable {
 
     /**
      * Get current x-pan
-     * 
+     *
      * @return current x-pan
      */
     public float getPanX() {
@@ -36,8 +36,23 @@ public class ZoomState extends Observable {
     }
 
     /**
+     * Set pan-x
+     *
+     * @param panX Pan-x value to set
+     */
+    public void setPanX(float panX) {
+        if (mZoom == 1.0f) {
+            return;
+        }
+        if (panX != mPanX) {
+            mPanX = panX;
+            setChanged();
+        }
+    }
+
+    /**
      * Get current y-pan
-     * 
+     *
      * @return Current y-pan
      */
     public float getPanY() {
@@ -45,8 +60,23 @@ public class ZoomState extends Observable {
     }
 
     /**
+     * Set pan-y
+     *
+     * @param panY Pan-y value to set
+     */
+    public void setPanY(float panY) {
+        if (mZoom == 1.0f) {
+            return;
+        }
+        if (panY != mPanY) {
+            mPanY = panY;
+            setChanged();
+        }
+    }
+
+    /**
      * Get current zoom value
-     * 
+     *
      * @return Current zoom value
      */
     public float getZoom() {
@@ -54,8 +84,24 @@ public class ZoomState extends Observable {
     }
 
     /**
+     * Set zoom
+     *
+     * @param zoom Zoom value to set
+     */
+    public void setZoom(float zoom) {
+        if (zoom != mZoom) {
+            mZoom = mZoom < 0.5f ? 0.5f : zoom;
+            if (mZoom == 0.5f) {
+                this.mPanX = 0.5f;
+                this.mPanY = 0.5f;
+            }
+            setChanged();
+        }
+    }
+
+    /**
      * Help function for calculating current zoom value in x-dimension
-     * 
+     *
      * @param aspectQuotient (Aspect ratio content) / (Aspect ratio view)
      * @return Current zoom value in x-dimension
      */
@@ -65,58 +111,12 @@ public class ZoomState extends Observable {
 
     /**
      * Help function for calculating current zoom value in y-dimension
-     * 
+     *
      * @param aspectQuotient (Aspect ratio content) / (Aspect ratio view)
      * @return Current zoom value in y-dimension
      */
     public float getZoomY(float aspectQuotient) {
         return Math.min(mZoom, mZoom / aspectQuotient);
-    }
-
-    /**
-     * Set pan-x
-     * 
-     * @param panX Pan-x value to set
-     */
-    public void setPanX(float panX) {
-    	if(mZoom ==1.0f){
-    		return ; 
-    	}
-        if (panX != mPanX) {
-            mPanX = panX;
-            setChanged();
-        }
-    }
-
-    /**
-     * Set pan-y
-     * 
-     * @param panY Pan-y value to set
-     */
-    public void setPanY(float panY) {
-    	if(mZoom == 1.0f){
-    		return ;
-    	}
-        if (panY != mPanY) {
-            mPanY = panY;
-            setChanged();
-        }
-    }
-
-    /**
-     * Set zoom
-     * 
-     * @param zoom Zoom value to set
-     */
-    public void setZoom(float zoom) {
-        if (zoom != mZoom) {
-        	mZoom = mZoom<0.5f?0.5f:zoom;
-        	if(mZoom==0.5f){
-        		this.mPanX = 0.5f;
-        		this.mPanY = 0.5f;
-        	}
-            setChanged();
-        }
     }
 
 }

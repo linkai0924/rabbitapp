@@ -18,9 +18,8 @@ import android.widget.ImageView;
 
 /**
  * 圆形的imageView
- * 
+ *
  * @author Zr
- * 
  */
 public class RoundImageView extends ImageView {
     private Context mContext;
@@ -106,33 +105,6 @@ public class RoundImageView extends ImageView {
         mContext = context;
     }
 
-    @Override
-    public void setImageResource(int resId) {
-        Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(), resId);
-        setImageBitmap(bitmap);
-    }
-
-    @Override
-    public void setImageDrawable(Drawable drawable) {
-        if (drawable == null)
-            return;
-        BitmapDrawable bd = (BitmapDrawable) drawable;
-        Drawable _drawable = new BitmapDrawable(toRoundBitmap(bd.getBitmap()));
-        super.setImageDrawable(_drawable);
-    }
-
-    @Override
-    public void setImageBitmap(Bitmap bm) {
-        if (bm == null)
-            return;
-        try {
-            Bitmap bitmap = toRoundBitmap(bm);
-            super.setImageBitmap(bitmap);
-        } catch (Exception e) {
-
-        }
-    }
-
     public static Bitmap toRoundBitmap(Bitmap bitmap) {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -181,6 +153,33 @@ public class RoundImageView extends ImageView {
         paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
         canvas.drawBitmap(bitmap, src, dst, paint);
         return output;
+    }
+
+    @Override
+    public void setImageResource(int resId) {
+        Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(), resId);
+        setImageBitmap(bitmap);
+    }
+
+    @Override
+    public void setImageDrawable(Drawable drawable) {
+        if (drawable == null)
+            return;
+        BitmapDrawable bd = (BitmapDrawable) drawable;
+        Drawable _drawable = new BitmapDrawable(toRoundBitmap(bd.getBitmap()));
+        super.setImageDrawable(_drawable);
+    }
+
+    @Override
+    public void setImageBitmap(Bitmap bm) {
+        if (bm == null)
+            return;
+        try {
+            Bitmap bitmap = toRoundBitmap(bm);
+            super.setImageBitmap(bitmap);
+        } catch (Exception e) {
+
+        }
     }
 
 }

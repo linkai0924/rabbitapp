@@ -1,9 +1,7 @@
 package net.duohuo.dhroid.ioc.annotation;
+
 /**
- * 
- *
- * @author duohuo-jinghao 
- *
+ * @author duohuo-jinghao
  */
 public class InjectResource {
 

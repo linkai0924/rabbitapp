@@ -4,20 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:background="@color/black60"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/classify_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="" >
+            android:tag="">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="2" >
+            android:tag="2">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="3" >
+            android:tag="3">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="1" >
+            android:tag="1">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -95,19 +95,19 @@
                 android:src="@drawable/icon_right" />
         </RelativeLayout>
     </LinearLayout>
-    
+
     <LinearLayout
         android:id="@+id/state_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="vertical" >
-        
+        android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="" >
+            android:tag="">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -128,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="1" >
+            android:tag="1">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -149,7 +149,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="2" >
+            android:tag="2">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -170,7 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="3" >
+            android:tag="3">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -191,7 +191,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="4" >
+            android:tag="4">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -205,13 +205,14 @@
                 android:layout_centerVertical="true"
                 android:src="@drawable/icon_right" />
         </RelativeLayout>
+
         <View style="@style/line_horizontal" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_leftandright"
-            android:tag="5" >
+            android:tag="5">
 
             <TextView
                 style="@style/text_44_black_medium"

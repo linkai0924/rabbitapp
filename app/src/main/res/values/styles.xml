@@ -2,7 +2,23 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     -->
     <!-- Application theme. -->
     <style name="AppTheme" parent="android:Theme.Light">
@@ -168,20 +184,20 @@
         <item name="android:minHeight">22dp</item>
         <item name="android:maxHeight">22dp</item>
     </style>
-    
-      <style name="roomRatingBarSmall" parent="@android:style/Widget.RatingBar">
+
+    <style name="roomRatingBarSmall" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/ratingbarsmall_drawable</item>
         <item name="android:numStars">5</item>
         <item name="android:minHeight">12dp</item>
         <item name="android:maxHeight">12dp</item>
     </style>
-    
-      <style name="Dialog_Fullscreen">
+
+    <style name="Dialog_Fullscreen">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@color/black60</item>
     </style>
-    
-      <style name="PopupLookAround" parent="android:Animation">
+
+    <style name="PopupLookAround" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/zoom_in</item>
         <item name="android:windowExitAnimation">@anim/zoom_out</item>
     </style>

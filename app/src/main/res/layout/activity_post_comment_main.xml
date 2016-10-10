@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <include layout="@layout/include_title_bar" />
 
@@ -14,7 +14,7 @@
         android:background="@color/white"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <EditText
             android:id="@+id/content"
@@ -33,16 +33,16 @@
             android:layout_marginTop="@dimen/padding_leftandright"
             android:background="@drawable/fillet_90_black_bg"
             android:gravity="center"
-            android:visibility="invisible"
             android:padding="@dimen/padding_leftandright"
-            android:text="@string/post_comment_txt" />
-        
-         <android.support.v7.widget.RecyclerView
-            	android:id="@+id/recyclerView"
-            	android:layout_width="match_parent"
-            	android:layout_height="77dp"
-                android:scrollbars="none" />
-        
+            android:text="@string/post_comment_txt"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:scrollbars="none" />
+
     </LinearLayout>
 
     <View
@@ -54,13 +54,13 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_small"
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <RatingBar
                     android:id="@+id/ratingbar"
@@ -82,9 +82,9 @@
                     android:stepSize="0.5" />
             </LinearLayout>
         </LinearLayout>
-        <View
-        style="@style/line_horizontal" />
-        
+
+        <View style="@style/line_horizontal" />
+
         <Button
             android:id="@+id/submit"
             android:layout_width="match_parent"
@@ -97,7 +97,7 @@
             android:text="@string/post_comment_submit"
             android:textColor="@color/white"
             android:textSize="@dimen/text_medium" />
-        
+
     </LinearLayout>
 
 </LinearLayout>

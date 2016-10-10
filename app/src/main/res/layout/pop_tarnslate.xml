@@ -3,28 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black61"
-    android:paddingBottom="15dp"
-    android:orientation="vertical" >
-    
-    
-    
-    
-    <ImageView 
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+
+    <ImageView
         android:layout_width="95dp"
         android:layout_height="95dp"
-        android:src="@drawable/icon_translate"
-          android:layout_centerHorizontal="true"
         android:layout_above="@+id/text"
-        />
-    
-    <TextView 
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_translate" />
+
+    <TextView
         android:id="@+id/text"
         style="@style/text_white_small"
-        android:text="@string/translate_des"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        />
-    
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/translate_des" />
+
 
 </RelativeLayout>

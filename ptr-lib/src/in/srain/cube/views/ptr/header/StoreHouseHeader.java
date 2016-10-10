@@ -8,12 +8,13 @@ import android.graphics.PointF;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Transformation;
+
+import java.util.ArrayList;
+
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrUIHandler;
 import in.srain.cube.views.ptr.indicator.PtrIndicator;
 import in.srain.cube.views.ptr.util.PtrLocalDisplay;
-
-import java.util.ArrayList;
 
 public class StoreHouseHeader extends View implements PtrUIHandler {
 

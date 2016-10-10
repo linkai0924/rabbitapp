@@ -3,7 +3,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/app_bg_color" >
+    android:background="@color/app_bg_color">
 
     <TextView
         android:id="@+id/name"

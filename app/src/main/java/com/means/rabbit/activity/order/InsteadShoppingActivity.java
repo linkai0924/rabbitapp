@@ -1,5 +1,24 @@
 package com.means.rabbit.activity.order;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.means.rabbit.R;
+import com.means.rabbit.activity.my.ShippingAddressActivity;
+import com.means.rabbit.activity.order.pay.InsteadShoppingPayActivity;
+import com.means.rabbit.api.API;
+import com.means.rabbit.base.RabbitBaseActivity;
+import com.means.rabbit.views.CartView;
+import com.means.rabbit.views.CartView.OnCartViewClickListener;
+
 import net.duohuo.dhroid.net.DhNet;
 import net.duohuo.dhroid.net.JSONUtil;
 import net.duohuo.dhroid.net.NetTask;
@@ -8,291 +27,259 @@ import net.duohuo.dhroid.util.ViewUtil;
 
 import org.json.JSONObject;
 
-import com.means.rabbit.R;
-import com.means.rabbit.R.layout;
-import com.means.rabbit.activity.home.SelectDistrictActivity;
-import com.means.rabbit.activity.my.ShippingAddressActivity;
-import com.means.rabbit.activity.order.pay.HotelOrderDetailActivity;
-import com.means.rabbit.activity.order.pay.InsteadShoppingPayActivity;
-import com.means.rabbit.api.API;
-import com.means.rabbit.base.RabbitBaseActivity;
-import com.means.rabbit.views.CartView;
-import com.means.rabbit.views.CartView.OnCartViewClickListener;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.EditText;
-import android.widget.TextView;
-
 /**
- * 
  * 代购订单
- * 
+ *
  * @author Administrator
- * 
  */
 public class InsteadShoppingActivity extends RabbitBaseActivity {
 
-	String daigouId;
-	EditText msgE, telE, usernameE;
+    final int Address = 1001;
+    String daigouId;
+    EditText msgE, telE, usernameE;
+    CartView cartView;
+    TextView totalPriceT;
+    Double price;
+    int credit;
+    String addressId;
 
-	CartView cartView;
+    TextView shifuT;
 
-	TextView totalPriceT;
+    EditText jifenE;
 
-	Double price;
+    TextView daikouT;
 
-	int credit;
+    // 积分比例
+    float creditY;
 
-	final int Address = 1001;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_instead_shopping);
+    }
 
-	String addressId;
+    @Override
+    public void initView() {
+        setTitle(getString(R.string.insteadshopping));
+        daigouId = getIntent().getStringExtra("daigouId");
+        cartView = (CartView) findViewById(R.id.cartView);
+        msgE = (EditText) findViewById(R.id.msg);
+        telE = (EditText) findViewById(R.id.tel);
+        usernameE = (EditText) findViewById(R.id.username);
+        totalPriceT = (TextView) findViewById(R.id.total_price);
 
-	TextView shifuT;
+        findViewById(R.id.submit).setOnClickListener(new OnClickListener() {
 
-	EditText jifenE;
+            @Override
+            public void onClick(View arg0) {
+                submit();
 
-	TextView daikouT;
+            }
+        });
 
-	// 积分比例
-	float creditY;
+        findViewById(R.id.address_layout).setOnClickListener(
+                new OnClickListener() {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_instead_shopping);
-	}
+                    @Override
+                    public void onClick(View v) {
+                        Intent it = new Intent(self,
+                                ShippingAddressActivity.class);
+                        startActivityForResult(it, Address);
+                    }
+                });
 
-	@Override
-	public void initView() {
-		setTitle(getString(R.string.insteadshopping));
-		daigouId = getIntent().getStringExtra("daigouId");
-		cartView = (CartView) findViewById(R.id.cartView);
-		msgE = (EditText) findViewById(R.id.msg);
-		telE = (EditText) findViewById(R.id.tel);
-		usernameE = (EditText) findViewById(R.id.username);
-		totalPriceT = (TextView) findViewById(R.id.total_price);
+        shifuT = (TextView) findViewById(R.id.shifu);
 
-		findViewById(R.id.submit).setOnClickListener(new OnClickListener() {
+        jifenE = (EditText) findViewById(R.id.credit);
+        daikouT = (TextView) findViewById(R.id.credit_s);
+        jifenE.addTextChangedListener(new TextWatcher() {
 
-			@Override
-			public void onClick(View arg0) {
-				submit();
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
 
-			}
-		});
+            }
 
-		findViewById(R.id.address_layout).setOnClickListener(
-				new OnClickListener() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
 
-					@Override
-					public void onClick(View v) {
-						Intent it = new Intent(self,
-								ShippingAddressActivity.class);
-						startActivityForResult(it, Address);
-					}
-				});
+            }
 
-		shifuT = (TextView) findViewById(R.id.shifu);
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (creditY != 0) {
+                    if (!TextUtils.isEmpty(jifenE.getText().toString())) {
+                        int jifen = Integer.parseInt(jifenE.getText()
+                                .toString());
+                        if (jifen > credit) {
+                            showToast(getString(R.string.favorable_des1)
+                                    + credit
+                                    + getString(R.string.favorable_num));
+                            jifenE.setText(0 + "");
+                        } else {
+                            float daikou = jifen / creditY;
+                            if (daikou > price) {
+                                showToast(getString(R.string.favorable_des)
+                                        + price * creditY
+                                        + getString(R.string.favorable_credit));
+                                jifenE.setText(0 + "");
+                                shifuT.setText(price + "");
+                            } else {
+                                daikouT.setText(getString(R.string.money_symbol)
+                                        + daikou);
+                                shifuT.setText(price - daikou + "");
+                            }
+                        }
+                    } else {
 
-		jifenE = (EditText) findViewById(R.id.credit);
-		daikouT = (TextView) findViewById(R.id.credit_s);
-		jifenE.addTextChangedListener(new TextWatcher() {
+                        jifenE.setText(0 + "");
+                        shifuT.setText(price + "");
+                        // jifenE.setText(0 + "");
+                    }
 
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+                }
+            }
+        });
 
-			}
+        getData();
+    }
 
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+    private void getData() {
+        DhNet net = new DhNet(new API().preDaigouOrder);
+        net.addParam("itemid", daigouId);
+        net.doGetInDialog(new NetTask(self) {
 
-			}
+            @Override
+            public void doInUI(Response response, Integer transfer) {
 
-			@Override
-			public void afterTextChanged(Editable s) {
-				if (creditY != 0) {
-					if (!TextUtils.isEmpty(jifenE.getText().toString())) {
-						int jifen = Integer.parseInt(jifenE.getText()
-								.toString());
-						if (jifen > credit) {
-							showToast(getString(R.string.favorable_des1)
-									+ credit
-									+ getString(R.string.favorable_num));
-							jifenE.setText(0 + "");
-						} else {
-							float daikou = jifen / creditY;
-							if (daikou > price) {
-								showToast(getString(R.string.favorable_des)
-										+ price * creditY
-										+ getString(R.string.favorable_credit));
-								jifenE.setText(0 + "");
-								shifuT.setText(price + "");
-							} else {
-								daikouT.setText(getString(R.string.money_symbol)
-										+ daikou);
-								shifuT.setText(price - daikou + "");
-							}
-						}
-					} else {
+                if (response.isSuccess()) {
+                    JSONObject jo = response.jSONFromData();
+                    ViewUtil.bindView(findViewById(R.id.name),
+                            JSONUtil.getString(jo, "title"));
 
-						jifenE.setText(0 + "");
-						shifuT.setText(price + "");
-						// jifenE.setText(0 + "");
-					}
+                    JSONObject user_dataJo = JSONUtil.getJSONObject(jo,
+                            "user_data");
 
-				}
-			}
-		});
+                    credit = JSONUtil.getInt(user_dataJo, "credit");
+                    int credit_s = JSONUtil.getInt(user_dataJo, "credit_s");
+                    if (credit_s != 0) {
+                        creditY = credit / (float) credit_s;
 
-		getData();
-	}
+                    } else {
+                        jifenE.setText(0 + "");
+                    }
 
-	private void getData() {
-		DhNet net = new DhNet(new API().preDaigouOrder);
-		net.addParam("itemid", daigouId);
-		net.doGetInDialog(new NetTask(self) {
+                    jifenE.setEnabled(credit_s == 0 ? false : true);
+                    ViewUtil.bindView(
+                            findViewById(R.id.youfei),
+                            getString(R.string.money_symbol)
+                                    + JSONUtil.getString(jo, "emoney"));
 
-			@Override
-			public void doInUI(Response response, Integer transfer) {
+                    ViewUtil.bindView(findViewById(R.id.tel),
+                            JSONUtil.getString(user_dataJo, "phone"));
 
-				if (response.isSuccess()) {
-					JSONObject jo = response.jSONFromData();
-					ViewUtil.bindView(findViewById(R.id.name),
-							JSONUtil.getString(jo, "title"));
+                    ViewUtil.bindView(findViewById(R.id.username),
+                            JSONUtil.getString(user_dataJo, "nickname"));
+                    price = JSONUtil.getDouble(jo, "price");
 
-					JSONObject user_dataJo = JSONUtil.getJSONObject(jo,
-							"user_data");
+                    totalPriceT.setText(getString(R.string.money_symbol)
+                            + price);
 
-					credit = JSONUtil.getInt(user_dataJo, "credit");
-					int credit_s = JSONUtil.getInt(user_dataJo, "credit_s");
-					if (credit_s != 0) {
-						creditY = credit / (float) credit_s;
+                    ViewUtil.bindView(findViewById(R.id.price),
+                            getString(R.string.money_symbol) + price);
 
-					} else {
-						jifenE.setText(0 + "");
-					}
+                    cartView.setOnCartViewClickListener(new OnCartViewClickListener() {
 
-					jifenE.setEnabled(credit_s == 0 ? false : true);
-					ViewUtil.bindView(
-							findViewById(R.id.youfei),
-							getString(R.string.money_symbol)
-									+ JSONUtil.getString(jo, "emoney"));
+                        @Override
+                        public void onClick() {
 
-					ViewUtil.bindView(findViewById(R.id.tel),
-							JSONUtil.getString(user_dataJo, "phone"));
+                            totalPriceT
+                                    .setText(getString(R.string.money_symbol)
+                                            + cartView.getCartNum() * price);
 
-					ViewUtil.bindView(findViewById(R.id.username),
-							JSONUtil.getString(user_dataJo, "nickname"));
-					price = JSONUtil.getDouble(jo, "price");
+                            if (Integer.parseInt(jifenE.getText().toString()) == 0) {
+                                shifuT.setText(cartView.getCartNum() * price
+                                        + "");
+                            } else {
+                                shifuT.setText(cartView.getCartNum()
+                                        * price
+                                        - Integer.parseInt(jifenE.getText()
+                                        .toString()) / creditY + "");
+                            }
 
-					totalPriceT.setText(getString(R.string.money_symbol)
-							+ price);
+                        }
+                    });
+                    cartView.setMaxNum(100);
+                    shifuT.setText(price + "");
 
-					ViewUtil.bindView(findViewById(R.id.price),
-							getString(R.string.money_symbol) + price);
+                    JSONObject user_addressJo = JSONUtil.getJSONObject(jo,
+                            "user_address");
 
-					cartView.setOnCartViewClickListener(new OnCartViewClickListener() {
+                    ViewUtil.bindView(findViewById(R.id.add_username),
+                            JSONUtil.getString(user_addressJo, "lxname"));
+                    ViewUtil.bindView(findViewById(R.id.add_tel),
+                            JSONUtil.getString(user_addressJo, "lxphone"));
+                    ViewUtil.bindView(
+                            findViewById(R.id.address),
+                            JSONUtil.getString(user_addressJo, "areaname")
+                                    + JSONUtil.getString(user_addressJo,
+                                    "lxaddress"));
+                    addressId = JSONUtil.getString(user_addressJo, "id");
+                }
 
-						@Override
-						public void onClick() {
+            }
+        });
+    }
 
-							totalPriceT
-									.setText(getString(R.string.money_symbol)
-											+ cartView.getCartNum() * price);
+    private void submit() {
 
-							if (Integer.parseInt(jifenE.getText().toString()) == 0) {
-								shifuT.setText(cartView.getCartNum() * price
-										+ "");
-							} else {
-								shifuT.setText(cartView.getCartNum()
-										* price
-										- Integer.parseInt(jifenE.getText()
-												.toString()) / creditY + "");
-							}
+        DhNet net = new DhNet(new API().addDaigouOrder);
+        net.addParam("itemid", daigouId);
 
-						}
-					});
-					cartView.setMaxNum(100);
-					shifuT.setText(price + "");
+        net.addParam("buyernote", msgE.getText().toString());
+        net.addParam("buyername", usernameE.getText().toString());
+        net.addParam("buyerphone", telE.getText().toString());
+        net.addParam("ordercount", cartView.getCartNum());
+        net.addParam("credit", jifenE.getText().toString());
+        net.addParam("addressid", addressId);
+        net.doPostInDialog(getString(R.string.submiting), new NetTask(self) {
 
-					JSONObject user_addressJo = JSONUtil.getJSONObject(jo,
-							"user_address");
+            @Override
+            public void doInUI(Response response, Integer transfer) {
+                if (response.isSuccess()) {
+                    showToast(getString(R.string.submit_success));
+                    JSONObject jo = response.jSON();
+                    Intent it = new Intent(self,
+                            InsteadShoppingPayActivity.class);
+                    it.putExtra("orderid", JSONUtil.getString(jo, "id"));
+                    startActivity(it);
+                    finishWithoutAnim();
+                }
 
-					ViewUtil.bindView(findViewById(R.id.add_username),
-							JSONUtil.getString(user_addressJo, "lxname"));
-					ViewUtil.bindView(findViewById(R.id.add_tel),
-							JSONUtil.getString(user_addressJo, "lxphone"));
-					ViewUtil.bindView(
-							findViewById(R.id.address),
-							JSONUtil.getString(user_addressJo, "areaname")
-									+ JSONUtil.getString(user_addressJo,
-											"lxaddress"));
-					addressId = JSONUtil.getString(user_addressJo, "id");
-				}
+            }
+        });
 
-			}
-		});
-	}
+    }
 
-	private void submit() {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK && requestCode == Address) {
+            addressId = data.getStringExtra("id");
 
-		DhNet net = new DhNet(new API().addDaigouOrder);
-		net.addParam("itemid", daigouId);
+            ViewUtil.bindView(findViewById(R.id.add_username),
+                    data.getStringExtra("lxname"));
+            ViewUtil.bindView(findViewById(R.id.add_tel),
+                    data.getStringExtra("lxphone"));
+            ViewUtil.bindView(
+                    findViewById(R.id.address),
+                    data.getStringExtra("areaname")
+                            + data.getStringExtra("lxaddress"));
 
-		net.addParam("buyernote", msgE.getText().toString());
-		net.addParam("buyername", usernameE.getText().toString());
-		net.addParam("buyerphone", telE.getText().toString());
-		net.addParam("ordercount", cartView.getCartNum());
-		net.addParam("credit", jifenE.getText().toString());
-		net.addParam("addressid", addressId);
-		net.doPostInDialog(getString(R.string.submiting), new NetTask(self) {
+        }
 
-			@Override
-			public void doInUI(Response response, Integer transfer) {
-				if (response.isSuccess()) {
-					showToast(getString(R.string.submit_success));
-					JSONObject jo = response.jSON();
-					Intent it = new Intent(self,
-							InsteadShoppingPayActivity.class);
-					it.putExtra("orderid", JSONUtil.getString(jo, "id"));
-					startActivity(it);
-					finishWithoutAnim();
-				}
-
-			}
-		});
-
-	}
-
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// TODO Auto-generated method stub
-		super.onActivityResult(requestCode, resultCode, data);
-		if (resultCode == Activity.RESULT_OK && requestCode == Address) {
-			addressId = data.getStringExtra("id");
-
-			ViewUtil.bindView(findViewById(R.id.add_username),
-					data.getStringExtra("lxname"));
-			ViewUtil.bindView(findViewById(R.id.add_tel),
-					data.getStringExtra("lxphone"));
-			ViewUtil.bindView(
-					findViewById(R.id.address),
-					data.getStringExtra("areaname")
-							+ data.getStringExtra("lxaddress"));
-
-		}
-
-	}
+    }
 
 }

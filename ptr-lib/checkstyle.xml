@@ -1,21 +1,20 @@
-<?xml version="1.0"?>
-<!DOCTYPE module PUBLIC
+<?xml version="1.0"?><!DOCTYPE module PUBLIC
     "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 
 <module name="Checker">
     <!--module name="NewlineAtEndOfFile"/-->
-    <module name="FileLength"/>
-    <module name="FileTabCharacter"/>
+    <module name="FileLength" />
+    <module name="FileTabCharacter" />
 
     <!-- Trailing spaces -->
     <module name="RegexpSingleline">
-        <property name="format" value="\s+$"/>
-        <property name="message" value="Line has trailing spaces."/>
+        <property name="format" value="\s+$" />
+        <property name="message" value="Line has trailing spaces." />
     </module>
 
     <module name="TreeWalker">
-        <property name="cacheFile" value="${checkstyle.cache.file}"/>
+        <property name="cacheFile" value="${checkstyle.cache.file}" />
 
         <!-- Checks for Javadoc comments.                     -->
         <!-- See http://checkstyle.sf.net/config_javadoc.html -->
@@ -30,9 +29,9 @@
         <!--module name="ConstantName"/-->
         <!--module name="LocalFinalVariableName"/-->
         <!--module name="LocalVariableName"/-->
-        <module name="MemberName"/>
+        <module name="MemberName" />
         <!--module name="MethodName"/-->
-        <module name="PackageName"/>
+        <module name="PackageName" />
         <!--module name="ParameterName"/-->
         <!--module name="StaticVariableName"/-->
         <!--module name="TypeName"/-->
@@ -40,10 +39,10 @@
 
         <!-- Checks for imports                              -->
         <!-- See http://checkstyle.sf.net/config_import.html -->
-        <module name="AvoidStarImport"/>
-        <module name="IllegalImport"/> <!-- defaults to sun.* packages -->
-        <module name="RedundantImport"/>
-        <module name="UnusedImports"/>
+        <module name="AvoidStarImport" />
+        <module name="IllegalImport" /> <!-- defaults to sun.* packages -->
+        <module name="RedundantImport" />
+        <module name="UnusedImports" />
 
 
         <!-- Checks for Size Violations.                    -->
@@ -91,14 +90,14 @@
         <!--module name="InnerAssignment"/-->
         <!--module name="MagicNumber"/-->
         <!--module name="MissingSwitchDefault"/-->
-        <module name="RedundantThrows"/>
+        <module name="RedundantThrows" />
         <!--module name="SimplifyBooleanExpression"/-->
         <!--module name="SimplifyBooleanReturn"/-->
-        <module name="StringLiteralEquality"/>
-        <module name="CovariantEquals"/>
+        <module name="StringLiteralEquality" />
+        <module name="CovariantEquals" />
         <!--module name="NoClone"/-->
-        <module name="NoFinalizer"/>
-        <module name="PackageDeclaration"/>
+        <module name="NoFinalizer" />
+        <module name="PackageDeclaration" />
         <!--module name="FallThrough"/-->
 
         <!-- Checks for class design                         -->
@@ -115,6 +114,6 @@
         <!--module name="ArrayTypeStyle"/-->
         <!--module name="FinalParameters"/-->
         <!--module name="TodoComment"/-->
-        <module name="UpperEll"/>
+        <module name="UpperEll" />
     </module>
 </module>

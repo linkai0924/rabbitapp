@@ -2,7 +2,6 @@ package com.means.rabbit.views;
 
 import android.app.Activity;
 import android.graphics.drawable.BitmapDrawable;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,6 @@ public class TranslatePop implements View.OnClickListener {
 
     PopupWindow pop;
 
-    
 
     public TranslatePop(Activity context) {
         this.context = context;
@@ -52,7 +50,7 @@ public class TranslatePop implements View.OnClickListener {
         switch (v.getId()) {
         }
     }
-    
+
 
 }
 

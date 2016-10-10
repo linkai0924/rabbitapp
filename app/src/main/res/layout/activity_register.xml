@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include layout="@layout/include_title_bar" />
 
@@ -11,7 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/phone_layout"
@@ -20,7 +20,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="@dimen/padding_leftandright"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -45,14 +45,14 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -90,7 +90,7 @@
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
                 android:background="@color/nothing"
-             android:gravity="center_vertical|right"
+                android:gravity="center_vertical|right"
                 android:hint="@string/register_code_hint"
                 android:inputType="number" />
 
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"

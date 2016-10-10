@@ -6,14 +6,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 
  * 注入 extra
- * @author duohuo-jinghao
  *
+ * @author duohuo-jinghao
  */
 @Target(ElementType.FIELD)
-@Retention(RetentionPolicy.RUNTIME) 
+@Retention(RetentionPolicy.RUNTIME)
 public @interface InjectExtra {
-	public String name();
-	public String def() default "";
+    public String name();
+
+    public String def() default "";
 }

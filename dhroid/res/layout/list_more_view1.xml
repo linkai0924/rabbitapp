@@ -5,7 +5,7 @@
     android:background="@color/nothing"
     android:gravity="center"
     android:paddingBottom="8dip"
-    android:paddingTop="5dip" >
+    android:paddingTop="5dip">
 
     <ProgressBar
         android:id="@+id/pull_to_refresh_load_progress"

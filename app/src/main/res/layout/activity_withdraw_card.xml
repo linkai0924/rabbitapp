@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include layout="@layout/include_title_bar" />
 
@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -26,15 +26,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right|center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/money"
                     style="@style/text_44_black_big"
                     android:background="@color/white"
+                    android:gravity="right"
                     android:hint="@string/withdrawcard_money_des"
                     android:inputType="number"
-                    android:gravity="right"
                     android:textColor="@color/text_2B_green" />
             </LinearLayout>
         </LinearLayout>
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -57,15 +57,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right|center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/cardid"
                     style="@style/text_44_black_big"
                     android:background="@color/white"
+                    android:gravity="right"
                     android:hint="@string/withdrawcard_code_des"
                     android:inputType="number"
-                    android:gravity="right"
                     android:textColor="@color/text_2B_green" />
             </LinearLayout>
         </LinearLayout>
@@ -76,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -86,14 +86,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right|center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/name"
                     style="@style/text_44_black_big"
                     android:background="@color/white"
-                    android:hint="@string/withdrawcard_name_des"
                     android:gravity="right"
+                    android:hint="@string/withdrawcard_name_des"
                     android:textColor="@color/text_2B_green" />
             </LinearLayout>
         </LinearLayout>

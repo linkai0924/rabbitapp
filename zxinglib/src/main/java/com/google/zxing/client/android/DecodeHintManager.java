@@ -16,14 +16,14 @@
 
 package com.google.zxing.client.android;
 
-import java.util.EnumMap;
-import java.util.Map;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.google.zxing.DecodeHintType;
+
+import java.util.EnumMap;
+import java.util.Map;
 
 /**
  * @author Lachezar Dobrev

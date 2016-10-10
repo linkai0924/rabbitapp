@@ -16,9 +16,6 @@
 
 package com.google.zxing.client.android;
 
-import com.google.zxing.ResultPoint;
-import com.google.zxing.client.android.camera.CameraManager;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
@@ -28,6 +25,9 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.google.zxing.ResultPoint;
+import com.google.zxing.client.android.camera.CameraManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,14 +45,13 @@ public final class ViewfinderView extends View {
     private static final int CURRENT_POINT_OPACITY = 0xA0;
     private static final int MAX_RESULT_POINTS = 20;
     private static final int POINT_SIZE = 6;
-
-    private CameraManager cameraManager;
     private final Paint paint;
-    private Bitmap resultBitmap;
     private final int maskColor;
     private final int resultColor;
     private final int laserColor;
     private final int resultPointColor;
+    private CameraManager cameraManager;
+    private Bitmap resultBitmap;
     private int scannerAlpha;
     private List<ResultPoint> possibleResultPoints;
     private List<ResultPoint> lastPossibleResultPoints;

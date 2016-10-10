@@ -1,7 +1,5 @@
 package com.means.rabbit.photo.domain;
 
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
@@ -12,6 +10,8 @@ import com.means.rabbit.activity.main.PhotoSelectorActivity.OnLocalReccentListen
 import com.means.rabbit.photo.controller.AlbumController;
 import com.means.rabbit.photo.model.AlbumModel;
 import com.means.rabbit.photo.model.PhotoModel;
+
+import java.util.List;
 
 @SuppressLint("HandlerLeak")
 public class PhotoSelectorDomain {

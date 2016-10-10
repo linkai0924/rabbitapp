@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="220dp" >
+        android:layout_height="220dp">
 
         <com.means.rabbit.views.NomalGallery
             android:id="@+id/gallery"
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <RatingBar
             android:id="@+id/ratingbar"
@@ -127,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -142,7 +142,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             android:id="@+id/label"
@@ -160,7 +160,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -171,7 +171,7 @@
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
             android:orientation="horizontal"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -198,8 +198,7 @@
     <com.means.rabbit.views.HotelYudingView
         android:id="@+id/yuding_view"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-    </com.means.rabbit.views.HotelYudingView>
+        android:layout_height="wrap_content"></com.means.rabbit.views.HotelYudingView>
 
     <View
         android:layout_width="fill_parent"
@@ -210,7 +209,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"

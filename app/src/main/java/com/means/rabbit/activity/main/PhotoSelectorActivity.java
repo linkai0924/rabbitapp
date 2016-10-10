@@ -4,11 +4,6 @@ package com.means.rabbit.activity.main;
  * @author Aizaz AZ
  */
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import net.duohuo.dhroid.util.PhotoUtil;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -41,6 +36,12 @@ import com.means.rabbit.photo.ui.PhotoSelectorAdapter;
 import com.means.rabbit.utils.AnimationUtil;
 import com.means.rabbit.utils.CommonUtils;
 
+import net.duohuo.dhroid.util.PhotoUtil;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Aizaz AZ
  */
@@ -50,15 +51,10 @@ public class PhotoSelectorActivity extends Activity implements onItemClickListen
     public static final int SINGLE_IMAGE = 1;
 
     public static final String KEY_MAX = "key_max";
-
-    private int MAX_IMAGE = 9;
-
     public static final int REQUEST_PHOTO = 0;
-
     private static final int REQUEST_CAMERA = 1;
-
     public static String RECCENT_PHOTO = null;
-
+    private int MAX_IMAGE = 9;
     private GridView gvPhotos;
 
     private ListView lvAblum;
@@ -84,6 +80,26 @@ public class PhotoSelectorActivity extends Activity implements onItemClickListen
     // 图片缓存根目录
     private File mCacheDir;
     private String mPhotoPath;
+    private OnLocalAlbumListener albumListener = new OnLocalAlbumListener() {
+        @Override
+        public void onAlbumLoaded(List<AlbumModel> albums) {
+            albumAdapter.update(albums);
+        }
+    };
+    private OnLocalReccentListener reccentListener = new OnLocalReccentListener() {
+        @Override
+        public void onPhotoLoaded(List<PhotoModel> photos) {
+            for (PhotoModel model : photos) {
+                if (selected.contains(model)) {
+                    model.setChecked(true);
+                }
+            }
+            photoAdapter.update(photos);
+            gvPhotos.smoothScrollToPosition(0); // 滚动到顶端
+            // reset(); //--keep selected photos
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -336,8 +352,8 @@ public class PhotoSelectorActivity extends Activity implements onItemClickListen
         else
             bundle.putInt("position", position);
         bundle.putString("album", tvAlbum.getText().toString());
-        if( tvAlbum.getText().toString().equals("选择照片")) {
-            bundle.putString("album","最近照片");
+        if (tvAlbum.getText().toString().equals("选择照片")) {
+            bundle.putString("album", "最近照片");
         }
         CommonUtils.launchActivity(this, PhotoPreviewActivity.class, bundle);
 
@@ -413,26 +429,4 @@ public class PhotoSelectorActivity extends Activity implements onItemClickListen
     public interface OnLocalAlbumListener {
         public void onAlbumLoaded(List<AlbumModel> albums);
     }
-
-    private OnLocalAlbumListener albumListener = new OnLocalAlbumListener() {
-        @Override
-        public void onAlbumLoaded(List<AlbumModel> albums) {
-            albumAdapter.update(albums);
-        }
-    };
-
-    private OnLocalReccentListener reccentListener = new OnLocalReccentListener() {
-        @Override
-        public void onPhotoLoaded(List<PhotoModel> photos) {
-            for (PhotoModel model : photos) {
-                if (selected.contains(model)) {
-                    model.setChecked(true);
-                }
-            }
-            photoAdapter.update(photos);
-            gvPhotos.smoothScrollToPosition(0); // 滚动到顶端
-            // reset(); //--keep selected photos
-
-        }
-    };
 }

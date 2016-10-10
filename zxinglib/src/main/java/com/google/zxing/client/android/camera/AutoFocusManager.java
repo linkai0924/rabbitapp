@@ -23,11 +23,11 @@ import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.google.zxing.client.android.PreferencesActivity;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.concurrent.RejectedExecutionException;
-
-import com.google.zxing.client.android.PreferencesActivity;
 
 final class AutoFocusManager implements Camera.AutoFocusCallback {
 
@@ -35,16 +35,17 @@ final class AutoFocusManager implements Camera.AutoFocusCallback {
 
     private static final long AUTO_FOCUS_INTERVAL_MS = 2000L;
     private static final Collection<String> FOCUS_MODES_CALLING_AF;
+
     static {
         FOCUS_MODES_CALLING_AF = new ArrayList<String>(2);
         FOCUS_MODES_CALLING_AF.add(Camera.Parameters.FOCUS_MODE_AUTO);
         FOCUS_MODES_CALLING_AF.add(Camera.Parameters.FOCUS_MODE_MACRO);
     }
 
-    private boolean stopped;
-    private boolean focusing;
     private final boolean useAutoFocus;
     private final Camera camera;
+    private boolean stopped;
+    private boolean focusing;
     private AsyncTask<?, ?, ?> outstandingTask;
 
     AutoFocusManager(Context context, Camera camera) {

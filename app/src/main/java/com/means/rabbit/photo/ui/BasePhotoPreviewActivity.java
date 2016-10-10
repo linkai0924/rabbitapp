@@ -1,11 +1,8 @@
 package com.means.rabbit.photo.ui;
 
 /**
- * 
  * @author Aizaz AZ
- *
  */
-import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -23,43 +20,36 @@ import android.widget.TextView;
 import com.means.rabbit.R;
 import com.means.rabbit.photo.model.PhotoModel;
 
+import java.util.List;
+
 public class BasePhotoPreviewActivity extends Activity implements OnPageChangeListener, OnClickListener {
 
-    private ViewPager mViewPager;
-
-    private RelativeLayout layoutTop;
-
-    private ImageView btnBack;
-
-    private TextView tvPercent;
-
     protected List<PhotoModel> photos;
-
     protected int current;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);// 去掉标题栏
-        setContentView(R.layout.activity_photopreview);
-        layoutTop = (RelativeLayout) findViewById(R.id.layout_top_app);
-        btnBack = (ImageView) findViewById(R.id.btn_back_app);
-        tvPercent = (TextView) findViewById(R.id.tv_percent_app);
-        mViewPager = (ViewPager) findViewById(R.id.vp_base_app);
-
-        btnBack.setOnClickListener(this);
-        mViewPager.setOnPageChangeListener(this);
-
-        overridePendingTransition(R.anim.activity_alpha_action_in, 0); // 渐入效果
-
-    }
-
-    /** 绑定数据，更新界面 */
-    protected void bindData() {
-        mViewPager.setAdapter(mPagerAdapter);
-        mViewPager.setCurrentItem(current);
-    }
-
+    protected boolean isUp;
+    private ViewPager mViewPager;
+    private RelativeLayout layoutTop;
+    private ImageView btnBack;
+    private TextView tvPercent;
+    /** 图片点击事件回调 */
+    private OnClickListener photoItemClickListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            // if (!isUp) {
+            // new AnimationUtil(getApplicationContext(), R.anim.translate_up)
+            // .setInterpolator(new
+            // LinearInterpolator()).setFillAfter(true).startAnimation(layoutTop);
+            // isUp = true;
+            // } else {
+            // new AnimationUtil(getApplicationContext(),
+            // R.anim.translate_down_current)
+            // .setInterpolator(new
+            // LinearInterpolator()).setFillAfter(true).startAnimation(layoutTop);
+            // isUp = false;
+            // }
+            finish();
+        }
+    };
     private PagerAdapter mPagerAdapter = new PagerAdapter() {
 
         @Override
@@ -92,7 +82,28 @@ public class BasePhotoPreviewActivity extends Activity implements OnPageChangeLi
 
     };
 
-    protected boolean isUp;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);// 去掉标题栏
+        setContentView(R.layout.activity_photopreview);
+        layoutTop = (RelativeLayout) findViewById(R.id.layout_top_app);
+        btnBack = (ImageView) findViewById(R.id.btn_back_app);
+        tvPercent = (TextView) findViewById(R.id.tv_percent_app);
+        mViewPager = (ViewPager) findViewById(R.id.vp_base_app);
+
+        btnBack.setOnClickListener(this);
+        mViewPager.setOnPageChangeListener(this);
+
+        overridePendingTransition(R.anim.activity_alpha_action_in, 0); // 渐入效果
+
+    }
+
+    /** 绑定数据，更新界面 */
+    protected void bindData() {
+        mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setCurrentItem(current);
+    }
 
     @Override
     public void onClick(View v) {
@@ -119,24 +130,4 @@ public class BasePhotoPreviewActivity extends Activity implements OnPageChangeLi
     protected void updatePercent() {
         tvPercent.setText((current + 1) + "/" + photos.size());
     }
-
-    /** 图片点击事件回调 */
-    private OnClickListener photoItemClickListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            // if (!isUp) {
-            // new AnimationUtil(getApplicationContext(), R.anim.translate_up)
-            // .setInterpolator(new
-            // LinearInterpolator()).setFillAfter(true).startAnimation(layoutTop);
-            // isUp = true;
-            // } else {
-            // new AnimationUtil(getApplicationContext(),
-            // R.anim.translate_down_current)
-            // .setInterpolator(new
-            // LinearInterpolator()).setFillAfter(true).startAnimation(layoutTop);
-            // isUp = false;
-            // }
-            finish();
-        }
-    };
 }

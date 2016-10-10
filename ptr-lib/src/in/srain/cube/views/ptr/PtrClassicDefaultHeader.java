@@ -11,10 +11,11 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import in.srain.cube.views.ptr.indicator.PtrIndicator;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import in.srain.cube.views.ptr.indicator.PtrIndicator;
 
 public class PtrClassicDefaultHeader extends FrameLayout implements PtrUIHandler {
 

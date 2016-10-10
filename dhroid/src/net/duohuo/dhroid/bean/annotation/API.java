@@ -7,11 +7,11 @@ import java.lang.annotation.Target;
 
 
 @Target(ElementType.FIELD)
-@Retention(RetentionPolicy.RUNTIME) 
+@Retention(RetentionPolicy.RUNTIME)
 public @interface API {
-	//对应方法
-	public String url() default "";
-	
-	public String params();
-	
+    //对应方法
+    public String url() default "";
+
+    public String params();
+
 }

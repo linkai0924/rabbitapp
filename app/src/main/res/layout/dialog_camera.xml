@@ -4,19 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/camera_layout"
@@ -24,7 +24,7 @@
                 android:layout_height="46dp"
                 android:background="@color/white"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/text_44_black_small"
@@ -44,7 +44,7 @@
                 android:layout_height="46dp"
                 android:background="@color/white"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/text_44_black_small"
@@ -60,7 +60,7 @@
             android:layout_height="46dp"
             android:background="@color/app_bg_color"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 style="@style/text_44_black_small"

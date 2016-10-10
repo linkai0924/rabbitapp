@@ -1,21 +1,17 @@
 package com.means.rabbit.utils;
 
+import android.util.Log;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import android.util.Log;
 
 /*
  *@author zhanglong
  *Email:1269521147@qq.com
  */
 public class FileUtil {
-
-    public enum UNIT_SACLE {
-        B, KB, M, G
-    }
 
     public static long getFileOrDirSize(File file, UNIT_SACLE scale) {
         long size = 0;
@@ -66,19 +62,19 @@ public class FileUtil {
 
     public static long formatFileSize(long size, UNIT_SACLE scale) {
         switch (scale) {
-        case B:
-            break;
-        case KB:
-            size = size / 1024;
-            break;
-        case M:
-            size = size / (1024 * 1024);
-            break;
-        case G:
-            size = size / (1024 * 1024 * 1024);
-            break;
-        default:
-            break;
+            case B:
+                break;
+            case KB:
+                size = size / 1024;
+                break;
+            case M:
+                size = size / (1024 * 1024);
+                break;
+            case G:
+                size = size / (1024 * 1024 * 1024);
+                break;
+            default:
+                break;
         }
         return size;
     }
@@ -109,5 +105,9 @@ public class FileUtil {
         } else {
             return deleteFile(file);
         }
+    }
+
+    public enum UNIT_SACLE {
+        B, KB, M, G
     }
 }

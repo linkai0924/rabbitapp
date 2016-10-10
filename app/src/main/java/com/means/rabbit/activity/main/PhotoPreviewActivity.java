@@ -1,11 +1,8 @@
 package com.means.rabbit.activity.main;
 
 /**
- * 
  * @author Aizaz AZ
- *
  */
-import java.util.List;
 
 import android.os.Bundle;
 
@@ -14,6 +11,8 @@ import com.means.rabbit.photo.domain.PhotoSelectorDomain;
 import com.means.rabbit.photo.model.PhotoModel;
 import com.means.rabbit.photo.ui.BasePhotoPreviewActivity;
 import com.means.rabbit.utils.CommonUtils;
+
+import java.util.List;
 
 public class PhotoPreviewActivity extends BasePhotoPreviewActivity implements OnLocalReccentListener {
 

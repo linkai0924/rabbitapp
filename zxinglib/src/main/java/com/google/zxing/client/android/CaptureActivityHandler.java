@@ -16,16 +16,16 @@
 
 package com.google.zxing.client.android;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.Result;
-import com.google.zxing.client.android.camera.CameraManager;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.DecodeHintType;
+import com.google.zxing.Result;
+import com.google.zxing.client.android.camera.CameraManager;
 
 import java.util.Collection;
 import java.util.Map;
@@ -41,14 +41,8 @@ public final class CaptureActivityHandler extends Handler {
 
     private final CaptureActivity activity;
     private final DecodeThread decodeThread;
-    private State state;
     private final CameraManager cameraManager;
-
-    private enum State {
-        PREVIEW,
-        SUCCESS,
-        DONE
-    }
+    private State state;
 
     CaptureActivityHandler(CaptureActivity activity,
                            Collection<BarcodeFormat> decodeFormats,
@@ -110,6 +104,12 @@ public final class CaptureActivityHandler extends Handler {
             cameraManager.requestPreviewFrame(decodeThread.getHandler(), R.id.decode);
             activity.drawViewfinder();
         }
+    }
+
+    private enum State {
+        PREVIEW,
+        SUCCESS,
+        DONE
     }
 
 }

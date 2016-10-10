@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,19 +12,19 @@
         android:orientation="horizontal"
         android:paddingBottom="@dimen/padding_leftandright"
         android:paddingRight="@dimen/padding_leftandright"
-        android:paddingTop="@dimen/padding_leftandright" >
+        android:paddingTop="@dimen/padding_leftandright">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/isread"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
 
                 <TextView
                     android:id="@+id/dateline"
-                    style="@style/text_66_black_small"/>
+                    style="@style/text_66_black_small" />
             </LinearLayout>
         </LinearLayout>
 
@@ -67,7 +67,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:gravity="right"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -75,5 +75,6 @@
                 android:src="@drawable/icon_right" />
         </LinearLayout>
     </RelativeLayout>
-<View style="@style/line_horizontal"/>
+
+    <View style="@style/line_horizontal" />
 </LinearLayout>

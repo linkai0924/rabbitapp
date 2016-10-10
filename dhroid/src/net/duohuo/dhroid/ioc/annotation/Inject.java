@@ -6,16 +6,15 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 
  * 注入 ioc容器中的对象
- * @author duohuo-jinghao
  *
+ * @author duohuo-jinghao
  */
 @Target(ElementType.FIELD)
-@Retention(RetentionPolicy.RUNTIME) 
+@Retention(RetentionPolicy.RUNTIME)
 public @interface Inject {
-	
-	public String name() default "";
-	
-	public String tag() default "";
+
+    public String name() default "";
+
+    public String tag() default "";
 }

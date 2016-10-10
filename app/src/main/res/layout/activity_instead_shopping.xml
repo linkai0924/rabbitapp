@@ -4,26 +4,26 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <include layout="@layout/include_title_bar" />
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     android:id="@+id/name"
@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/price"
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -62,13 +62,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <com.means.rabbit.views.CartView
                         android:id="@+id/cartView"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" >
-                    </com.means.rabbit.views.CartView>
+                        android:layout_height="wrap_content"></com.means.rabbit.views.CartView>
                 </LinearLayout>
             </LinearLayout>
 
@@ -79,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -89,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/youfei"
@@ -104,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -114,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/total_price"
@@ -133,17 +132,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/add_username"
@@ -166,7 +165,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right|center_vertical" >
+                    android:gravity="right|center_vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -183,7 +182,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -193,7 +192,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/tel"
@@ -212,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -222,7 +221,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/username"
@@ -240,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -250,7 +249,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/msg"
@@ -268,7 +267,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -278,7 +277,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/credit"
@@ -311,7 +310,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_99_grey_medium"

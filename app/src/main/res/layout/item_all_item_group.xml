@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/app_bg_color"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="8dp" >
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/pic"
@@ -21,7 +21,7 @@
         <TextView
             android:id="@+id/name"
             style="@style/text_44_black_medium"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp" />
     </LinearLayout>
 
     <View style="@style/line_horizontal" />

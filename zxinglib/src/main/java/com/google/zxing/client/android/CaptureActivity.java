@@ -16,20 +16,25 @@
 
 package com.google.zxing.client.android;
 
-import android.view.*;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.Result;
-import com.google.zxing.ResultMetadataType;
-import com.google.zxing.client.android.camera.CameraManager;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.DecodeHintType;
+import com.google.zxing.Result;
+import com.google.zxing.ResultMetadataType;
+import com.google.zxing.client.android.camera.CameraManager;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -257,7 +262,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         if (rawBytes != null && rawBytes.length > 0) {
             intent.putExtra(Intents.Scan.RESULT_BYTES, rawBytes);
         }
-        Map<ResultMetadataType,?> metadata = rawResult.getResultMetadata();
+        Map<ResultMetadataType, ?> metadata = rawResult.getResultMetadata();
         if (metadata != null) {
             if (metadata.containsKey(ResultMetadataType.UPC_EAN_EXTENSION)) {
                 intent.putExtra(Intents.Scan.RESULT_UPC_EAN_EXTENSION,

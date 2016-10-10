@@ -88,7 +88,7 @@ public class PhotoItem extends LinearLayout implements OnCheckedChangeListener, 
          */
 
         ImageLoader.getInstance().displayImage("file://" + photo.getOriginalPath(), ivPhoto,
-        		RabbitValueFix.optionsDefault);
+                RabbitValueFix.optionsDefault);
     }
 
     private void setDrawingable() {
@@ -117,6 +117,13 @@ public class PhotoItem extends LinearLayout implements OnCheckedChangeListener, 
             l.onItemClick(position);
     }
 
+    @Override
+    public boolean onLongClick(View v) {
+        if (l != null)
+            l.onItemClick(position);
+        return true;
+    }
+
     public static interface onPhotoItemCheckedListener {
         public void onCheckedChanged(PhotoModel photoModel, CompoundButton buttonView, boolean isChecked,
                                      ImageView imgView);
@@ -124,13 +131,6 @@ public class PhotoItem extends LinearLayout implements OnCheckedChangeListener, 
 
     public interface onItemClickListener {
         public void onItemClick(int position);
-    }
-
-    @Override
-    public boolean onLongClick(View v) {
-        if (l != null)
-            l.onItemClick(position);
-        return true;
     }
 
 }

@@ -1,29 +1,26 @@
 package com.means.rabbit;
 
 import android.content.Context;
-import android.text.TextUtils;
 
 import net.duohuo.dhroid.dialog.IDialog;
 import net.duohuo.dhroid.ioc.IocContainer;
 import net.duohuo.dhroid.net.GlobalCodeHandler;
-import net.duohuo.dhroid.net.JSONUtil;
 import net.duohuo.dhroid.net.Response;
 
 import org.json.JSONObject;
 
 /**
- * 
  * @author duohuo-jinghao
  * @date 2014-10-23
  */
 public class KmlGlobalCodeHandler implements GlobalCodeHandler {
 
-	Long time = 0l;
+    Long time = 0l;
 
-	@Override
-	public void hanlder(Context context, Response response) {
+    @Override
+    public void hanlder(Context context, Response response) {
 
-		JSONObject jo = response.jSON();
+        JSONObject jo = response.jSON();
 //		if (!TextUtils.isEmpty(JSONUtil.getString(jo, "success"))) {
 //			if (JSONUtil.getString(jo, "success").equals("false")) {
 //				String code = JSONUtil.getString(jo, "code");
@@ -50,25 +47,25 @@ public class KmlGlobalCodeHandler implements GlobalCodeHandler {
 //				// title, msg, null);
 //			}
 //		}
-		if (!response.isSuccess()) {
-			IocContainer.getShare().get(IDialog.class)
-					.showToastLong(context, response.getMsg());
-			// String error = JSONUtil.getString(response.jSON(), "errorCode");
-			// if ("macerror".equals(error))
-			// {
-			// }
-			// else if ("tokenerror".equals(error))
-			// {
-			// }
-			// else
-			// {
-			// String code = JSONUtil.getString(response.jSON(), "code");
-			// if ("noNetError".equals(code))
-			// {
-			// IocContainer.getShare().get(IDialog.class).showToastLong(context,
-			// response.getMsg());
-			// }
-			// }
-		}
-	}
+        if (!response.isSuccess()) {
+            IocContainer.getShare().get(IDialog.class)
+                    .showToastLong(context, response.getMsg());
+            // String error = JSONUtil.getString(response.jSON(), "errorCode");
+            // if ("macerror".equals(error))
+            // {
+            // }
+            // else if ("tokenerror".equals(error))
+            // {
+            // }
+            // else
+            // {
+            // String code = JSONUtil.getString(response.jSON(), "code");
+            // if ("noNetError".equals(code))
+            // {
+            // IocContainer.getShare().get(IDialog.class).showToastLong(context,
+            // response.getMsg());
+            // }
+            // }
+        }
+    }
 }

@@ -17,6 +17,7 @@
 package com.google.zxing.client.android;
 
 import android.content.Intent;
+
 import com.google.zxing.BarcodeFormat;
 
 import java.util.Arrays;
@@ -28,15 +29,15 @@ import java.util.regex.Pattern;
 
 final class DecodeFormatManager {
 
-    private static final Pattern COMMA_PATTERN = Pattern.compile(",");
-
     static final Set<BarcodeFormat> PRODUCT_FORMATS;
     static final Set<BarcodeFormat> INDUSTRIAL_FORMATS;
-    private static final Set<BarcodeFormat> ONE_D_FORMATS;
     static final Set<BarcodeFormat> QR_CODE_FORMATS = EnumSet.of(BarcodeFormat.QR_CODE);
     static final Set<BarcodeFormat> DATA_MATRIX_FORMATS = EnumSet.of(BarcodeFormat.DATA_MATRIX);
     static final Set<BarcodeFormat> AZTEC_FORMATS = EnumSet.of(BarcodeFormat.AZTEC);
     static final Set<BarcodeFormat> PDF417_FORMATS = EnumSet.of(BarcodeFormat.PDF_417);
+    private static final Pattern COMMA_PATTERN = Pattern.compile(",");
+    private static final Set<BarcodeFormat> ONE_D_FORMATS;
+    private static final Map<String, Set<BarcodeFormat>> FORMATS_FOR_MODE;
 
     static {
         PRODUCT_FORMATS = EnumSet.of(BarcodeFormat.UPC_A,
@@ -53,8 +54,6 @@ final class DecodeFormatManager {
         ONE_D_FORMATS = EnumSet.copyOf(PRODUCT_FORMATS);
         ONE_D_FORMATS.addAll(INDUSTRIAL_FORMATS);
     }
-
-    private static final Map<String, Set<BarcodeFormat>> FORMATS_FOR_MODE;
 
     static {
         FORMATS_FOR_MODE = new HashMap<String, Set<BarcodeFormat>>();

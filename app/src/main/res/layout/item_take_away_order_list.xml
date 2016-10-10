@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:orientation="vertical" >
-    
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -20,8 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
-            
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/text_99_grey_medium"
                 android:text="×2" />
@@ -34,6 +34,6 @@
     </LinearLayout>
 
     <View style="@style/line_horizontal" />
-    
+
 
 </LinearLayout>

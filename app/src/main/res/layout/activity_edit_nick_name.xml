@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <include layout="@layout/include_title_bar" />
 
@@ -14,7 +14,7 @@
         android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/nickname"
@@ -46,7 +46,7 @@
         android:paddingBottom="15dp"
         android:paddingLeft="23dp"
         android:paddingRight="23dp"
-        android:paddingTop="15dp" >
+        android:paddingTop="15dp">
 
         <Button
             android:id="@+id/save"

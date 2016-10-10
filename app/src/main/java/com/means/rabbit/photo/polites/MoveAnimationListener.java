@@ -19,10 +19,9 @@ package com.means.rabbit.photo.polites;
 
 /**
  * @author Jason Polites
- *
  */
 public interface MoveAnimationListener {
 
-	public void onMove(float x, float y);
-	
+    public void onMove(float x, float y);
+
 }

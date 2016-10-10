@@ -1,61 +1,62 @@
 package net.duohuo.dhroid.net.upload;
 
+import org.apache.http.entity.mime.MultipartEntity;
+
 import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.http.entity.mime.MultipartEntity;
-
 public class ProgressMultipartEntity extends MultipartEntity {
 
-	private ProgressListener listener;
+    private ProgressListener listener;
 
-	public ProgressMultipartEntity() {
-		super();
-	}
+    public ProgressMultipartEntity() {
+        super();
+    }
 
-	public void setProgressListener(ProgressListener listener) {
-		this.listener = listener;
-	}
+    public void setProgressListener(ProgressListener listener) {
+        this.listener = listener;
+    }
 
-	@Override
-	public void writeTo(final OutputStream outstream) throws IOException {
-		super.writeTo(new CountingOutputStream(outstream, this.listener));
-	}
+    @Override
+    public void writeTo(final OutputStream outstream) throws IOException {
+        super.writeTo(new CountingOutputStream(outstream, this.listener));
+    }
 
-	public static interface ProgressListener {
-		void transferred(long num);
-		boolean isCanceled();
-	}
+    public static interface ProgressListener {
+        void transferred(long num);
 
-	public static class CountingOutputStream extends FilterOutputStream {
+        boolean isCanceled();
+    }
 
-		private final ProgressListener listener;
-		private long transferred;
+    public static class CountingOutputStream extends FilterOutputStream {
 
-		public CountingOutputStream(final OutputStream out,
-				final ProgressListener listener) {
-			super(out);
-			this.listener = listener;
-			this.transferred = 0;
-		}
+        private final ProgressListener listener;
+        private long transferred;
 
-		public void write(byte[] b, int off, int len) throws IOException {
-			if(!listener.isCanceled()){
-				out.write(b, off, len);
-				this.transferred += len;
-				this.listener.transferred(this.transferred);
-			}else{
-				throw new CancelException("任务已被取消");
-			}
-		}
+        public CountingOutputStream(final OutputStream out,
+                                    final ProgressListener listener) {
+            super(out);
+            this.listener = listener;
+            this.transferred = 0;
+        }
 
-		public void write(int b) throws IOException {
-			out.write(b);
-			this.transferred++;
-			this.listener.transferred(this.transferred);
-		}
-	}
-	
-	
+        public void write(byte[] b, int off, int len) throws IOException {
+            if (!listener.isCanceled()) {
+                out.write(b, off, len);
+                this.transferred += len;
+                this.listener.transferred(this.transferred);
+            } else {
+                throw new CancelException("任务已被取消");
+            }
+        }
+
+        public void write(int b) throws IOException {
+            out.write(b);
+            this.transferred++;
+            this.listener.transferred(this.transferred);
+        }
+    }
+
+
 }

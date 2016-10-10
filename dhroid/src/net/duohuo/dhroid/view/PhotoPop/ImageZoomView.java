@@ -16,23 +16,35 @@ import java.util.Observer;
  */
 public class ImageZoomView extends View implements Observer {
 
-    /** Paint object used when drawing bitmap. */
+    /**
+     * Paint object used when drawing bitmap.
+     */
     private final Paint mPaint = new Paint(Paint.FILTER_BITMAP_FLAG);
 
-    /** Rectangle used (and re-used) for cropping source image. */
+    /**
+     * Rectangle used (and re-used) for cropping source image.
+     */
     private final Rect mRectSrc = new Rect();
 
-    /** Rectangle used (and re-used) for specifying drawing area on canvas. */
+    /**
+     * Rectangle used (and re-used) for specifying drawing area on canvas.
+     */
     private final Rect mRectDst = new Rect();
 
-    /** The bitmap that we're zooming in, and drawing on the screen. */
+    /**
+     * The bitmap that we're zooming in, and drawing on the screen.
+     */
     private Bitmap mBitmap;
 
-    /** Pre-calculated aspect quotient. */
+    /**
+     * Pre-calculated aspect quotient.
+     */
     private float mAspectQuotient;
 
-    /** State of the zoom. */
-	private ZoomState mState;
+    /**
+     * State of the zoom.
+     */
+    private ZoomState mState;
 
     // Public methods
 
@@ -45,7 +57,7 @@ public class ImageZoomView extends View implements Observer {
 
     /**
      * Set image bitmap
-     * 
+     *
      * @param bitmap The bitmap to view and zoom into
      */
     public void setImage(Bitmap bitmap) {
@@ -58,7 +70,7 @@ public class ImageZoomView extends View implements Observer {
 
     /**
      * Set object holding the zoom state that should be used
-     * 
+     *
      * @param state The zoom state
      */
     public void setZoomState(ZoomState state) {
@@ -67,7 +79,7 @@ public class ImageZoomView extends View implements Observer {
         }
 
         mState = state;
-        mState.addObserver(this);   
+        mState.addObserver(this);
 
         invalidate();
     }
@@ -76,8 +88,8 @@ public class ImageZoomView extends View implements Observer {
 
     private void calculateAspectQuotient() {
         if (mBitmap != null) {
-            mAspectQuotient = (((float)mBitmap.getWidth()) / mBitmap.getHeight())
-                    / (((float)getWidth()) / getHeight());
+            mAspectQuotient = (((float) mBitmap.getWidth()) / mBitmap.getHeight())
+                    / (((float) getWidth()) / getHeight());
         }
     }
 
@@ -97,10 +109,10 @@ public class ImageZoomView extends View implements Observer {
             final float zoomY = mState.getZoomY(mAspectQuotient) * viewHeight / bitmapHeight;
 
             // Setup source and destination rectangles
-            mRectSrc.left = (int)(panX * bitmapWidth - viewWidth / (zoomX * 2));
-            mRectSrc.top = (int)(panY * bitmapHeight - viewHeight / (zoomY * 2));
-            mRectSrc.right = (int)(mRectSrc.left + viewWidth / zoomX);
-            mRectSrc.bottom = (int)(mRectSrc.top + viewHeight / zoomY);
+            mRectSrc.left = (int) (panX * bitmapWidth - viewWidth / (zoomX * 2));
+            mRectSrc.top = (int) (panY * bitmapHeight - viewHeight / (zoomY * 2));
+            mRectSrc.right = (int) (mRectSrc.left + viewWidth / zoomX);
+            mRectSrc.bottom = (int) (mRectSrc.top + viewHeight / zoomY);
             mRectDst.left = getLeft();
             mRectDst.top = getTop();
             mRectDst.right = getRight();
@@ -136,8 +148,8 @@ public class ImageZoomView extends View implements Observer {
     }
 
     // implements Observer
-	public void update(Observable observable, Object data) {
+    public void update(Observable observable, Object data) {
         invalidate();
     }
- 
+
 }

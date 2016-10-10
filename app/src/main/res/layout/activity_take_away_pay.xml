@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <include layout="@layout/include_title_bar" />
-    
+
     <include layout="@layout/include_listview" />
 
 

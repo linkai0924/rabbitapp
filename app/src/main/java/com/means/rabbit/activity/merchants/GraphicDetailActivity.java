@@ -9,21 +9,21 @@ import com.means.rabbit.base.RabbitBaseActivity;
 
 public class GraphicDetailActivity extends RabbitBaseActivity {
 
-	String content;
+    String content;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_graphic_detail);
-	}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_graphic_detail);
+    }
 
-	@Override
-	public void initView() {
-		setTitle(getString(R.string.graphic_detail));
-		content = getIntent().getStringExtra("content");
-		TextView textT = (TextView) findViewById(R.id.text);
-		textT.setText(Html.fromHtml(content));
-	}
+    @Override
+    public void initView() {
+        setTitle(getString(R.string.graphic_detail));
+        content = getIntent().getStringExtra("content");
+        TextView textT = (TextView) findViewById(R.id.text);
+        textT.setText(Html.fromHtml(content));
+    }
 
 }

@@ -1,39 +1,41 @@
 package net.duohuo.dhroid.eventbus;
 
-import net.duohuo.dhroid.eventbus.Event;
+public class OnEventListener {
+    public String eventName;
 
-public class OnEventListener{
-	public String eventName;
-	
-	public String listenerName;
-	
-	public String getEventName() {
-		return eventName;
-	}
+    public String listenerName;
 
-	public void setEventName(String eventName) {
-		this.eventName = eventName;
-	}
+    public String getEventName() {
+        return eventName;
+    }
 
-	public String getListenerName() {
-		return listenerName;
-	}
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
 
-	public void setListenerName(String listenerName) {
-		this.listenerName = listenerName;
-	}
+    public String getListenerName() {
+        return listenerName;
+    }
 
-	/**
-	 * @param event
-	 * @return  是否继续事件
-	 */
-	public  Boolean doInBg(Event event){
-		return true;
-	};
-	
-	public Boolean doInUI(Event event){
-		return true;
-	};
+    public void setListenerName(String listenerName) {
+        this.listenerName = listenerName;
+    }
 
-	
+    /**
+     * @param event
+     * @return 是否继续事件
+     */
+    public Boolean doInBg(Event event) {
+        return true;
+    }
+
+    ;
+
+    public Boolean doInUI(Event event) {
+        return true;
+    }
+
+    ;
+
+
 }

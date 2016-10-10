@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <include layout="@layout/include_title_bar" />
 
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <EditText
             android:id="@+id/content"
@@ -22,8 +22,8 @@
             android:layout_toLeftOf="@+id/cancel"
             android:background="@color/white"
             android:drawableLeft="@drawable/icon_green_search"
-            android:hint="@string/search_content"
-            android:drawablePadding="5dp" />
+            android:drawablePadding="5dp"
+            android:hint="@string/search_content" />
 
         <TextView
             android:id="@+id/search"

@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/text_99_grey_medium"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/text_44_black_big"
@@ -61,19 +61,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="@dimen/padding_leftandright" >
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -88,15 +88,15 @@
             <TextView
                 style="@style/text_44_black_medium"
                 android:layout_marginTop="3dp"
-                android:singleLine="true"
                 android:ellipsize="end"
+                android:singleLine="true"
                 android:text="中国黑龙江省齐齐哈尔市富拉尔基区" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right|center_vertical" >
+            android:gravity="right|center_vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -105,15 +105,15 @@
                 android:src="@drawable/icon_right" />
         </LinearLayout>
     </LinearLayout>
-    
+
     <View style="@style/line_horizontal" />
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -123,12 +123,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/text_99_grey_medium"
                 android:text="15:30" />
-            
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -136,15 +136,15 @@
                 android:src="@drawable/icon_right" />
         </LinearLayout>
     </LinearLayout>
-    
+
     <View style="@style/line_horizontal" />
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -154,7 +154,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/text_99_grey_medium"
@@ -163,13 +163,13 @@
     </LinearLayout>
 
     <View style="@style/line_horizontal" />
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_leftandright" >
+        android:padding="@dimen/padding_leftandright">
 
         <TextView
             style="@style/text_44_black_medium"
@@ -179,7 +179,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/text_99_grey_medium"
@@ -188,104 +188,104 @@
     </LinearLayout>
 
     <View style="@style/line_horizontal" />
-    
+
     <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright">
 
-                <TextView
-                    style="@style/text_44_black_medium"
-                    android:text="@string/takeawayorder_remark" />
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeawayorder_remark" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
 
-                    <TextView
-                        style="@style/text_99_grey_medium"
-                        android:ellipsize="end"
-                        android:maxWidth="150dp"
-                        android:singleLine="true"
-                        android:text="@string/takeawayorder_fill_in" />
-                </LinearLayout>
-            </LinearLayout>
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:text="@string/takeawayorder_fill_in" />
+        </LinearLayout>
+    </LinearLayout>
 
-            <View style="@style/line_horizontal" />
-            
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+    <View style="@style/line_horizontal" />
 
-                <TextView
-                    style="@style/text_44_black_medium"
-                    android:text="@string/takeawayorder_use_integral" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeawayorder_use_integral" />
 
-                    <TextView
-                        style="@style/text_99_grey_medium"
-                        android:text="200" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
 
-                    <TextView
-                        style="@style/text_44_black_medium"
-                        android:layout_marginLeft="8dp"
-                        android:text="@string/takeawayorder_deduction"
-                        android:textColor="@color/text_2B_green" />
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="200" />
 
-                    <TextView
-                        style="@style/text_44_black_medium"
-                        android:layout_marginLeft="5dp"
-                        android:text="￥2"
-                        android:textColor="@color/text_2B_green" />
-                </LinearLayout>
-            </LinearLayout>
+            <TextView
+                style="@style/text_44_black_medium"
+                android:layout_marginLeft="8dp"
+                android:text="@string/takeawayorder_deduction"
+                android:textColor="@color/text_2B_green" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+            <TextView
+                style="@style/text_44_black_medium"
+                android:layout_marginLeft="5dp"
+                android:text="￥2"
+                android:textColor="@color/text_2B_green" />
+        </LinearLayout>
+    </LinearLayout>
 
-                <TextView
-                    style="@style/text_99_grey_medium"
-                    android:text="@string/takeawayorder_reality_money" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright">
 
-                <TextView
-                    style="@style/text_44_black_medium"
-                    android:layout_marginLeft="8dp"
-                    android:text="@string/money_symbol"
-                    android:textColor="@color/text_2B_green" />
+        <TextView
+            style="@style/text_99_grey_medium"
+            android:text="@string/takeawayorder_reality_money" />
 
-                <TextView
-                    style="@style/text_44_black_medium"
-                    android:layout_marginLeft="5dp"
-                    android:text="197"
-                    android:textColor="@color/text_2B_green" />
-            </LinearLayout>
+        <TextView
+            style="@style/text_44_black_medium"
+            android:layout_marginLeft="8dp"
+            android:text="@string/money_symbol"
+            android:textColor="@color/text_2B_green" />
 
-            <Button
-                android:id="@+id/logout"
-                style="@style/text_white_medium"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="23dp"
-                android:layout_marginRight="23dp"
-                android:background="@drawable/fillet_10_green_bg"
-                android:text="@string/takeawayorder_submit_order" />
+        <TextView
+            style="@style/text_44_black_medium"
+            android:layout_marginLeft="5dp"
+            android:text="197"
+            android:textColor="@color/text_2B_green" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logout"
+        style="@style/text_white_medium"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/fillet_10_green_bg"
+        android:text="@string/takeawayorder_submit_order" />
 
 </LinearLayout>

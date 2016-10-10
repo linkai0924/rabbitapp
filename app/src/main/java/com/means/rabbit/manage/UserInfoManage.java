@@ -8,54 +8,54 @@ import com.means.rabbit.bean.User;
 
 public class UserInfoManage {
 
-	static UserInfoManage instance;
+    static UserInfoManage instance;
 
-	public static UserInfoManage getInstance() {
-		if (instance == null) {
-			instance = new UserInfoManage();
-		}
-		return instance;
-	}
+    public static UserInfoManage getInstance() {
+        if (instance == null) {
+            instance = new UserInfoManage();
+        }
+        return instance;
+    }
 
-	public boolean checkLogin(final Activity context,
-			final LoginCallBack loginCallBack) {
-		boolean islogin = User.getInstance().isLogin();
-		if (!islogin) {
+    public boolean checkLogin(final Activity context,
+                              final LoginCallBack loginCallBack) {
+        boolean islogin = User.getInstance().isLogin();
+        if (!islogin) {
 
-			Intent it = new Intent(context, LoginActivity.class);
-			context.startActivity(it);
+            Intent it = new Intent(context, LoginActivity.class);
+            context.startActivity(it);
 
-		} else {
-			if (loginCallBack != null) {
-				loginCallBack.onisLogin();
-			}
-		}
-		return islogin;
-	}
+        } else {
+            if (loginCallBack != null) {
+                loginCallBack.onisLogin();
+            }
+        }
+        return islogin;
+    }
 
-	public boolean checkLogin2(final Activity context,
-			final LoginCallBack loginCallBack) {
-		boolean islogin = User.getInstance().isLogin();
-		if (!islogin) {
-			LoginActivity.loginCall = loginCallBack;
-			Intent it = new Intent(context, LoginActivity.class);
-			context.startActivity(it);
-			return false;
+    public boolean checkLogin2(final Activity context,
+                               final LoginCallBack loginCallBack) {
+        boolean islogin = User.getInstance().isLogin();
+        if (!islogin) {
+            LoginActivity.loginCall = loginCallBack;
+            Intent it = new Intent(context, LoginActivity.class);
+            context.startActivity(it);
+            return false;
 
-		}
+        }
 
-		if (loginCallBack != null) {
-			if (islogin) {
-				loginCallBack.onisLogin();
-			}
-		}
+        if (loginCallBack != null) {
+            if (islogin) {
+                loginCallBack.onisLogin();
+            }
+        }
 
-		return islogin;
-	}
+        return islogin;
+    }
 
-	public interface LoginCallBack {
-		public void onisLogin();
+    public interface LoginCallBack {
+        public void onisLogin();
 
-		public void onLoginFail();
-	}
+        public void onLoginFail();
+    }
 }

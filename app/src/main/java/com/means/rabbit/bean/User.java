@@ -2,34 +2,33 @@ package com.means.rabbit.bean;
 
 public class User {
 
-	static User instance;
+    static User instance;
 
-	public int type = 1;
+    public int type = 1;
+    public boolean isLogin;
 
-	public static User getInstance() {
-		if (instance == null) {
-			instance = new User();
-		}
+    public static User getInstance() {
+        if (instance == null) {
+            instance = new User();
+        }
 
-		return instance;
-	}
+        return instance;
+    }
 
-	public boolean isLogin;
+    public boolean isLogin() {
+        return isLogin;
+    }
 
-	public boolean isLogin() {
-		return isLogin;
-	}
+    public void setLogin(boolean isLogin) {
+        this.isLogin = isLogin;
+    }
 
-	public void setLogin(boolean isLogin) {
-		this.isLogin = isLogin;
-	}
+    public int getType() {
+        return type;
+    }
 
-	public int getType() {
-		return type;
-	}
-
-	public void setType(int type) {
-		this.type = type;
-	}
+    public void setType(int type) {
+        this.type = type;
+    }
 
 }

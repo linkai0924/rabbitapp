@@ -19,9 +19,9 @@ package com.means.rabbit.photo.polites;
 
 /**
  * @author Jason Polites
- *
  */
 public interface ZoomAnimationListener {
-	public void onZoom(float scale, float x, float y);
-	public void onComplete();
+    public void onZoom(float scale, float x, float y);
+
+    public void onComplete();
 }

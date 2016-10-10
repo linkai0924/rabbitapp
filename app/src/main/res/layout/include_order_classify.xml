@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:orientation="horizontal"
     android:paddingBottom="10dp"
-    android:paddingTop="10dp" >
+    android:paddingTop="10dp">
 
     <LinearLayout
         android:id="@+id/classify"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             style="@style/text_66_black_medium"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             style="@style/text_66_black_medium"

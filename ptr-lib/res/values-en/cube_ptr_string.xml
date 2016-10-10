@@ -10,14 +10,13 @@
     <string name="cube_ptr_seconds_ago">&#160;seconds ago</string>
     <string name="cube_ptr_minutes_ago">&#160;minutes ago</string>
     <string name="cube_ptr_hours_ago">&#160;hours ago</string>
-    
-    
+
+
     <string name="cube_views_load_more_loading">loading...</string>
     <string name="cube_views_load_more_loaded_empty">No more result</string>
     <string name="cube_views_load_more_loaded_no_more">You brush too fast, no more!</string>
     <string name="cube_views_load_more_click_to_load_more">Get more</string>
     <string name="cube_views_load_more_error">loading error</string>
-    
-    
+
 
 </resources>

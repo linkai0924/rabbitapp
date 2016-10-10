@@ -4,26 +4,26 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <include layout="@layout/include_title_bar" />
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     android:id="@+id/name"
@@ -36,7 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/price"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -61,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/count"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -86,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/youfei"
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -111,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/total_price"
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -137,7 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/code"
@@ -152,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -162,17 +162,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
-                   <EditText
-                       android:id="@+id/erweima_code"
-                       style="@style/text_7b_black_medium"
-                       android:background="@color/nothing"
-                       android:drawablePadding="5dp"
-                       android:gravity="center_vertical|right"
-                       android:hint="@string/businessorderdetails_putconsumercode"
-                       android:textColor="@color/text_2B_green"
-                       android:textColorHint="@color/text_2B_green" />
+                    <EditText
+                        android:id="@+id/erweima_code"
+                        style="@style/text_7b_black_medium"
+                        android:background="@color/nothing"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical|right"
+                        android:hint="@string/businessorderdetails_putconsumercode"
+                        android:textColor="@color/text_2B_green"
+                        android:textColorHint="@color/text_2B_green" />
 
                     <ImageView
                         android:id="@+id/erweima"
@@ -193,17 +193,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/add_username"
@@ -231,7 +231,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -241,7 +241,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/buyerphone"
@@ -256,7 +256,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -266,7 +266,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/buyername"
@@ -281,7 +281,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -291,7 +291,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/buyernote"
@@ -309,7 +309,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -319,7 +319,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/adddateline"
@@ -334,7 +334,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -344,7 +344,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/pay_time"
@@ -360,7 +360,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -370,7 +370,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/use_time"
@@ -386,7 +386,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_44_black_medium"
@@ -396,7 +396,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/credit"
@@ -424,7 +424,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="@dimen/padding_leftandright" >
+                android:padding="@dimen/padding_leftandright">
 
                 <TextView
                     style="@style/text_99_grey_medium"

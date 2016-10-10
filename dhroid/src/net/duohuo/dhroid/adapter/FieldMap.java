@@ -3,55 +3,51 @@ package net.duohuo.dhroid.adapter;
 import android.view.View;
 
 /**
- * 
  * 用于netAdapter的数据绑定
- * 
+ *
  * @author duohuo-jinghao
- * 
  */
 public abstract class FieldMap {
 
-	protected FieldMap(String key, Integer refId) {
-		super();
-		this.key = key;
-		this.refId = refId;
-	}
+    String key;
+    Integer refId;
+    String type;
+    protected FieldMap(String key, Integer refId) {
+        super();
+        this.key = key;
+        this.refId = refId;
+    }
+    protected FieldMap(String key, Integer refId, String type) {
+        super();
+        this.key = key;
+        this.refId = refId;
+        this.type = type;
+    }
 
-	protected FieldMap(String key, Integer refId, String type) {
-		super();
-		this.key = key;
-		this.refId = refId;
-		this.type = type;
-	}
+    public abstract Object fix(View itemV, Integer position, Object o, Object jo);
 
-	String key;
-	Integer refId;
-	String type;
+    public String getKey() {
+        return key;
+    }
 
-	public abstract Object fix(View itemV, Integer position, Object o, Object jo);
+    public void setKey(String key) {
+        this.key = key;
+    }
 
-	public String getKey() {
-		return key;
-	}
+    public Integer getRefId() {
+        return refId;
+    }
 
-	public void setKey(String key) {
-		this.key = key;
-	}
+    public void setRefId(Integer refId) {
+        this.refId = refId;
+    }
 
-	public Integer getRefId() {
-		return refId;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public void setRefId(Integer refId) {
-		this.refId = refId;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
+    public void setType(String type) {
+        this.type = type;
+    }
 
 }

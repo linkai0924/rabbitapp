@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_bg_color"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include layout="@layout/include_title_bar" />
 
@@ -11,7 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <!-- <LinearLayout
             android:layout_width="match_parent"
@@ -34,13 +34,13 @@
                 android:gravity="right"
                 android:hint="@string/edit_phone_hint_phone" />
         </LinearLayout> -->
-        
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -52,13 +52,13 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="@color/nothing"
-                android:inputType="phone"
                 android:gravity="right"
-                android:hint="@string/edit_phone_hint_new_phone" />
+                android:hint="@string/edit_phone_hint_new_phone"
+                android:inputType="phone" />
         </LinearLayout>
 
         <View style="@style/line_horizontal" />
-        
+
         <!-- <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,14 +81,14 @@
         </LinearLayout> -->
 
         <View style="@style/line_horizontal" />
-        
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/padding_leftandright" >
+            android:padding="@dimen/padding_leftandright">
 
             <TextView
                 style="@style/text_44_black_medium"
@@ -101,24 +101,23 @@
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
                 android:background="@color/nothing"
-              android:gravity="center_vertical|right"
+                android:gravity="center_vertical|right"
                 android:hint="@string/edit_phone_hint_code" />
 
             <TextView
                 android:id="@+id/getverification"
                 style="@style/text_white_medium"
                 android:background="@drawable/code_bg"
+                android:paddingBottom="3dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="3dp"
-                android:paddingBottom="3dp"
                 android:text="@string/edit_phone_get_code" />
         </LinearLayout>
 
         <View style="@style/line_horizontal" />
 
 
-        
         <Button
             android:id="@+id/submit"
             android:layout_width="match_parent"

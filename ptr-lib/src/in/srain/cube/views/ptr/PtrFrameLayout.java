@@ -3,9 +3,14 @@ package in.srain.cube.views.ptr;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.view.*;
+import android.view.Gravity;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.ViewGroup;
 import android.widget.Scroller;
 import android.widget.TextView;
+
 import in.srain.cube.views.ptr.indicator.PtrIndicator;
 import in.srain.cube.views.ptr.util.PtrCLog;
 
@@ -18,21 +23,21 @@ public class PtrFrameLayout extends ViewGroup {
 
     // status enum
     public final static byte PTR_STATUS_INIT = 1;
-    private byte mStatus = PTR_STATUS_INIT;
     public final static byte PTR_STATUS_PREPARE = 2;
     public final static byte PTR_STATUS_LOADING = 3;
     public final static byte PTR_STATUS_COMPLETE = 4;
     private static final boolean DEBUG_LAYOUT = true;
     public static boolean DEBUG = false;
     private static int ID = 1;
-    protected final String LOG_TAG = "ptr-frame-" + ++ID;
     // auto refresh status
     private static byte FLAG_AUTO_REFRESH_AT_ONCE = 0x01;
     private static byte FLAG_AUTO_REFRESH_BUT_LATER = 0x01 << 1;
     private static byte FLAG_ENABLE_NEXT_PTR_AT_ONCE = 0x01 << 2;
     private static byte FLAG_PIN_CONTENT = 0x01 << 3;
     private static byte MASK_AUTO_REFRESH = 0x03;
+    protected final String LOG_TAG = "ptr-frame-" + ++ID;
     protected View mContent;
+    private byte mStatus = PTR_STATUS_INIT;
     // optional config for define header and content in xml file
     private int mHeaderId = 0;
     private int mContainerId = 0;

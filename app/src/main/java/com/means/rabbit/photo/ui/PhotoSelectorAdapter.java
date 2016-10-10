@@ -1,7 +1,5 @@
 package com.means.rabbit.photo.ui;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +10,8 @@ import com.means.rabbit.R;
 import com.means.rabbit.photo.model.PhotoModel;
 import com.means.rabbit.photo.ui.PhotoItem.onItemClickListener;
 import com.means.rabbit.photo.ui.PhotoItem.onPhotoItemCheckedListener;
+
+import java.util.ArrayList;
 
 public class PhotoSelectorAdapter extends MBaseAdapter<PhotoModel> {
 
