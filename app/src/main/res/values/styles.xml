@@ -1,0 +1,189 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="text_white_biger">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">@dimen/text_biger</item>
+    </style>
+
+    <style name="text_white_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style>
+
+    <style name="text_white_medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="text_white_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="text_7b_black_biger">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_7b_black</item>
+        <item name="android:textSize">@dimen/text_biger</item>
+    </style>
+
+    <style name="text_7b_black_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_7b_black</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style>
+
+    <style name="text_7b_black_medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_7b_black</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="text_7b_black_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_7b_black</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="text_44_black_biger">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_44_black</item>
+        <item name="android:textSize">@dimen/text_biger</item>
+    </style>
+
+    <style name="text_44_black_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_44_black</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style>
+
+    <style name="text_44_black_medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_44_black</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="text_44_black_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_44_black</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="text_66_black_biger">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_66_black</item>
+        <item name="android:textSize">@dimen/text_biger</item>
+    </style>
+
+    <style name="text_66_black_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_66_black</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style>
+
+    <style name="text_66_black_medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_66_black</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="text_66_black_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_66_black</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="text_99_grey_biger">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_99_grey</item>
+        <item name="android:textSize">@dimen/text_biger</item>
+    </style>
+
+    <style name="text_99_grey_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_99_grey</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style>
+
+    <style name="text_99_grey_medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_99_grey</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="text_99_grey_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_99_grey</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1.5px</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="line_vertical">
+        <item name="android:layout_width">1.5px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_drawable</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">22dp</item>
+        <item name="android:maxHeight">22dp</item>
+    </style>
+    
+      <style name="roomRatingBarSmall" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbarsmall_drawable</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">12dp</item>
+        <item name="android:maxHeight">12dp</item>
+    </style>
+    
+      <style name="Dialog_Fullscreen">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/black60</item>
+    </style>
+    
+      <style name="PopupLookAround" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out</item>
+    </style>
+
+</resources>

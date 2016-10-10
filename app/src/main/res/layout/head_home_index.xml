@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res/com.means.rabbit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <net.duohuo.dhroid.view.NormalGallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="8dp" >
+
+        <LinearLayout
+            android:id="@+id/food_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_meishi"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/meishi" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/hotel_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_jiudian"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/my_order_pop_hotel" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/daigou"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_daigou"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/my_order_pop_daigou" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/travel_services"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_chuxing"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/chuxingfuwu" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/travel_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_lvxing"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/travel" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="11dp" >
+
+        <LinearLayout
+            android:id="@+id/entertainment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_xiuxian"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/xiuxianyule" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/exclusive_characteristics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_zhuanxiang"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/zhuanxiangtese" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/redpacket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_suishenfanyi"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/suishenfanyi" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/help_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_qiuzhu"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/jinjiqiuzhu" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/all_cat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <net.duohuo.dhroid.view.YToXImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/icon_quanbufenlei"
+                my:heightToWidth="1.0" />
+
+            <TextView
+                style="@style/text_66_black_small"
+                android:layout_marginTop="2dp"
+                android:text="@string/all_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/pic_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_lantutoutiao" />
+
+        <TextView
+            android:id="@+id/pic_0_title"
+            style="@style/text_66_black_small"
+            android:layout_marginLeft="5dp"
+            android:text="迎圣诞,享好礼" />
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="12dp"
+        android:background="@color/app_bg_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="240dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/pic_1"
+                android:layout_width="fill_parent"
+                android:layout_height="240dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_yuandan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/pic_2"
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_shengdan" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="130dp" >
+
+                <ImageView
+                    android:id="@+id/pic_3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/model_jingdian" />
+
+                <ImageView
+                    android:id="@+id/pic_4"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/model_xinnian" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/text_99_grey_small"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:background="@color/app_bg_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/guesslike" />
+
+</LinearLayout>

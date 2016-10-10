@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="骨肉相连" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+            
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="×2" />
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:layout_marginLeft="40dp"
+                android:text="￥7" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+    
+
+</LinearLayout>

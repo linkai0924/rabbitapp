@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_44_black_big" />
+
+            <TextView
+                android:id="@+id/tuangoudes"
+                style="@style/text_66_black_small"
+                android:layout_marginTop="9dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp" >
+
+                <TextView
+                    android:id="@+id/price"
+                    style="@style/text_44_black_medium"
+                    android:textColor="@color/text_2B_green" />
+
+                <TextView
+                    android:id="@+id/comment_des"
+                    style="@style/text_66_black_small"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ordercount"
+                    style="@style/text_66_black_small"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+</LinearLayout>

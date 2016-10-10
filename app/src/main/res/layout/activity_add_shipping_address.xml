@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <include layout="@layout/include_title_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/region_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/addshippingaddress_region" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/region"
+                        style="@style/text_7b_black_medium" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/icon_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/addshippingaddress_address" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/address"
+                        style="@style/text_7b_black_medium"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:hint="@string/addshippingaddress_input_address" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/addshippingaddress_phone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/phone"
+                        style="@style/text_7b_black_medium"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:hint="@string/addshippingaddress_input_phone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/addshippingaddress_name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/name"
+                        style="@style/text_7b_black_medium"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:hint="@string/addshippingaddress_input_name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/addshippingaddress_postcode" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/postcode"
+                        style="@style/text_7b_black_medium"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:hint="@string/addshippingaddress_input_postcode" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/addshippingaddress_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/checkbox"
+                        android:button="@null"
+                        android:checked="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_bg_color"
+                android:paddingBottom="15dp"
+                android:paddingLeft="23dp"
+                android:paddingRight="23dp"
+                android:paddingTop="15dp" >
+
+                <Button
+                    android:id="@+id/save"
+                    style="@style/text_white_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/fillet_10_green_bg"
+                    android:text="@string/addshippingaddress_save" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

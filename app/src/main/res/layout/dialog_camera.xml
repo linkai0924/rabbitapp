@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/camera_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/text_44_black_small"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/photo_take" />
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp" />
+
+            <LinearLayout
+                android:id="@+id/gallery_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/text_44_black_small"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/photo_picker" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:background="@color/app_bg_color"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text_44_black_small"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/photo_cancle" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

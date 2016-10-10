@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <include layout="@layout/include_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/padding_leftandright" >
+
+        <EditText
+            android:id="@+id/content"
+            style="@style/text_44_black_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/cancel"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/icon_green_search"
+            android:hint="@string/search_content"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:id="@+id/search"
+            style="@style/text_44_black_medium"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/search"
+            android:textColor="@color/text_2B_green" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_listview" />
+
+</LinearLayout>

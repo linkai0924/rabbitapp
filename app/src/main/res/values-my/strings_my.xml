@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LazyBunny</string>
+    <string name="progress_doing">Loading...</string>
+    <string name="wipe_cache_clear">kejayaan Cache pembersihan</string>
+    <string name="money_hint">RM0</string>
+    <string name="money_symbol">RM</string>
+    <string name="income">Income</string>
+    <string name="expend">Expend</string>
+    <string name="inexpensive">Discount</string>
+    <string name="home_title">profil</string>
+    <string name="order_title">Pesanan</string>
+    <string name="my_title">My</string>
+    <string name="myfragment_editinfo">profil</string>
+    <string name="myfragment_systemmsg">Mesej</string>
+    <string name="myfragment_business_order">Pesanan perniagaan</string>
+    <string name="myfragment_comment">Komen saya</string>
+    <string name="myfragment_shipping_address">Alamat</string>
+    <string name="myfragment_my_order">Pesanan</string>
+    <string name="myfragment_integral">Credit</string>
+    <string name="myfragment_collect">Kegemaran</string>
+    <string name="myfragment_current_account">Akaun tunai</string>
+    <string name="myfragment_log_keluar">log keluar</string>
+    <string name="myfragment_logout">akaun Exit</string>
+    <string name="exit_des">Kemudian klik satu prosedur keluar</string>
+    <string name="login_des">Loginning...</string>
+    <string name="submiting">Submitting...</string>
+    <string name="submit_success">kejayaan</string>
+    <string name="more">Lebih</string>
+    <!-- 系统消息 -->
+    <string name="systemmsg">Mesej</string>
+    <!-- 猜你喜欢 -->
+    <string name="guesslike">Saya rasa anda suka</string>
+    <!-- 编辑资料 -->
+    <string name="editinfo">profil</string>
+    <string name="editinfo_edithead">Gambar</string>
+    <string name="editinfo_nickname">Username</string>
+    <string name="editinfo_passwordr">Gambar</string>
+    <string name="editinfo_phone">telefon</string>
+    <string name="editinfo_name_des">Nama pengguna tidak boleh kosong</string>
+    <string name="editinfo_name_des1">bilangan Nama pengguna tidak boleh lebih daripada 14</string>
+    <string name="editinfo_head_success">kejayaan</string>
+    <string name="editinfo_success">kejayaan</string>
+    <string name="editinfo_tel_des">Nombor telefon tidak betul</string>
+    <string name="editinfo_tel_des1">Sila masukkan nombor telefon anda</string>
+    <string name="editinfo_code_des">Sila masukkan kod pengesahan yang</string>
+    <string name="editinfo_code_release">Hantar semula</string>
+    <string name="editinfo_pswd_des">Kata laluan untuk 6-15 surat bit dan nombor</string>
+    <string name="editinfo_pswd_des1">Kata laluan mesti mengandungi huruf</string>
+    <string name="more_about_us">mengenai Kami</string>
+    <string name="more_langswitcher">bahasa pensuisan</string>
+    <string name="more_feedback">Maklumbalas</string>
+    <string name="more_richscan">kod dua dimensi</string>
+    <string name="more_version_updating">Akhbar</string>
+    <string name="more_help">Bantuan</string>
+    <string name="more_wipe_cache">Clear cache</string>
+
+    <!-- 修改昵称 -->
+    <string name="edit_nickname">Username</string>
+    <string name="edit_save">Simpan</string>
+    <string name="edit_input_nickname">Sila masukkan nama pengguna</string>
+    <!-- 修改手机 -->
+    <string name="edit_phone">telefon</string>
+    <string name="edit_new_phone">new telefon</string>
+    <string name="edit_phone_password">kata laluan</string>
+    <string name="edit_phone_code">Kod pengesahan</string>
+    <string name="edit_phone_hint_phone">Please enter the old telefon number</string>
+    <string name="edit_phone_hint_new_phone">Please enter a new telefon number</string>
+    <string name="edit_phone_hint_password">Please enter a kata laluan</string>
+    <string name="edit_phone_hint_code">Please enter the Kod pengesahan</string>
+    <string name="edit_phone_get_code">Get Kod pengesahan</string>
+    <string name="edit_phone_submit">Hantar</string>
+    <string name="businessorder_classify">Kategori</string>
+    <string name="businessorder_state">Negeri</string>
+    <string name="item_order_finished">siap</string>
+    <string name="item_order_ordertime">masa Order</string>
+    <string name="businessorderdetails_amount">Kuantiti</string>
+    <string name="businessorderdetails_total">Jumlah</string>
+    <string name="businessorderdetails_ordernumber">Perintah Bil</string>
+    <string name="businessorderdetails_consumercode">Consumercode</string>
+    <string name="businessorderdetails_putconsumercode">（Put consumer code）</string>
+    <string name="businessorderdetails_phone">telefon</string>
+    <string name="businessorderdetails_odertime">masa Order</string>
+    <string name="businessorderdetails_paytime">Bayartm</string>
+    <string name="businessorderdetails_hours_of_use">Gunakan masa</string>
+    <string name="businessorderdetails_hours_of_integral">menggunakan kredit</string>
+    <string name="businessorderdetails_hours_amountpaid">Bayar</string>
+    <string name="businessorderdetails_btn_putconsumercode">Put consumer code</string>
+    <!-- 配送地址 -->
+    <string name="shippingaddressactivity">Alamat</string>
+    <string name="shippingaddressactivity_addadress">Tambah</string>
+    <string name="item_shippingaddress_default">Lalai</string>
+    <string name="addshippingaddress_region">kawasan</string>
+    <string name="addshippingaddress_address">Alamat</string>
+    <string name="addshippingaddress_phone">telefon</string>
+    <string name="addshippingaddress_name">Name</string>
+    <string name="addshippingaddress_postcode">Zip</string>
+    <string name="addshippingaddress_default">Lalai</string>
+    <string name="addshippingaddress_save">Simpan</string>
+    <string name="addshippingaddress_input_region">Sila masukkan kawasan</string>
+    <string name="addshippingaddress_input_address">Sila masukkan alamat</string>
+    <string name="addshippingaddress_input_phone">Sila masukkan telefon bimbit anda</string>
+    <string name="addshippingaddress_input_name">Sila masukkan nama anda</string>
+    <string name="addshippingaddress_input_postcode">Sila masukkan kod zip</string>
+    <!-- 翻译助手 -->
+    <string name="translate">menterjemahkan</string>
+    <string name="translate_hint">Sila masukkan sesuatu ...</string>
+    <string name="translate_content_hint">Sila masukkan sesuatu ...</string>
+    <string name="translate_text">Cina</string>
+    <string name="translate_language">bahasa</string>
+    <string name="translate_translate">menterjemahkan</string>
+    <string name="translate_result">keputusan</string>
+    <string name="translate_ing">loading...</string>
+
+    <!-- 选择语言 -->
+    <string name="SelectLanguage_chinese">中文</string>
+    <string name="translate_chinese">中文</string>
+    <string name="SelectLanguage_english">English</string>
+    <string name="translate_english">英文</string>
+    <string name="SelectLanguage_japanese">日本語</string>
+    <string name="translate_japanese">日语</string>
+    <!-- 阿拉伯 -->
+    <string name="SelectLanguage_arab">العربية</string>
+    <string name="translate_arab">阿拉伯语</string>
+    <!-- 朝鲜 -->
+    <string name="SelectLanguage_korea">한국어</string>
+    <string name="translate_korea">韩语</string>
+    <!-- 菲律宾 -->
+    <string name="SelectLanguage_philippines">Pilipino</string>
+    <string name="translate_philippines">菲律宾语</string>
+    <!-- 印尼 -->
+    <string name="SelectLanguage_indonesia">Indonesia</string>
+    <string name="translate_indonesia">印尼语</string>
+    <!-- 西班牙 -->
+    <string name="SelectLanguage_spain">espanol</string>
+    <string name="translate_spain">西班牙语</string>
+    <!-- 意大利 -->
+    <string name="SelectLanguage_italy">In Italia</string>
+    <string name="translate_italy">意大利语</string>
+    <string name="Lebih_about_us">Tentang kita</string>
+    <string name="Lebih_langswitcher">Bahasan</string>
+    <string name="Lebih_feedback">Maklumbalas</string>
+    <string name="Lebih_richscan">QR code</string>
+    <string name="Lebih_version_updating">versi</string>
+    <string name="Lebih_help">pusat bantuan</string>
+    <string name="Lebih_wipe_cache">Kosongkan cache</string>
+    <!-- 全部分类 -->
+    <string name="all_item_hot">Panas</string>
+    <string name="all_item_halal_food">makanan halal</string>
+
+    <!-- 登陆 -->
+    <string name="login_name_hint">Username</string>
+    <string name="login_name">Username</string>
+    <string name="login_pswd_hint">Please enter a kata laluan</string>
+    <string name="login_pswd">kata laluan</string>
+    <string name="login">Login</string>
+    <string name="login_forget_pswd">Forget the kata laluan</string>
+    <string name="login_register">Regist</string>
+    <string name="login_name_des">Username/Email</string>
+
+    <!-- 注册 -->
+    <string name="register_phone_hint">Please enter your telefon number</string>
+    <string name="register_phone">telefon</string>
+    <string name="register_name_hint">Enter one user name</string>
+    <string name="register_name">Username</string>
+    <string name="register_code_hint">Please enter the Kod pengesahan</string>
+    <string name="register_code">Kod pengesahan</string>
+    <string name="register">Regist</string>
+    <string name="register_get_code">Get code</string>
+    <string name="register_pswd_des">Please enter a user name within 8</string>
+    <string name="register_success">kejayaan</string>
+
+    <!-- 找回密码 -->
+    <string name="forget_pswd">Reset kata laluan</string>
+    <string name="forget_pswd_newpswd">New kata laluan</string>
+    <string name="forget_pswd_newpswd_hint">Please enter a new kata laluan</string>
+
+    <!-- 优惠买单 -->
+    <string name="favorable">Daftar</string>
+    <string name="favorable_expendamount">Jumlah</string>
+    <string name="favorable_use_integral">menggunakan kredit</string>
+    <string name="favorable_reality_money">Bayar</string>
+    <string name="favorable_deduction">-</string>
+    <string name="favorable_confirm_payment">Bayar</string>
+    <!-- 团购订单 -->
+    <string name="grouporder">Discount order</string>
+    <string name="grouporder_count">Amount</string>
+    <string name="grouporder_total">Jumlah</string>
+    <string name="grouporder_phone">telefon</string>
+    <string name="grouporder_use_integral">menggunakan kredit</string>
+    <string name="grouporder_reality_money">Bayar</string>
+    <string name="grouporder_deduction">-</string>
+    <string name="grouporder_submit_order">Hantar</string>
+    <!-- 酒店订单 -->
+    <string name="grogshop_name">Hotel</string>
+    <string name="grogshop_type">Type</string>
+    <string name="grogshop_date">Date</string>
+    <string name="grogshop_unit_price">Price</string>
+    <string name="grogshop_pay">Bayar</string>
+    <string name="grogshop_count">Advance</string>
+    <string name="grogshop_total">Jumlah</string>
+    <string name="grogshop_phone">telefon</string>
+    <string name="grogshop_linkman">Name</string>
+    <string name="grogshop_remark">Note</string>
+    <string name="grogshop_fill_in">Fill in other requirements</string>
+    <string name="grogshop_use_integral">menggunakan kredit</string>
+    <string name="grogshop_deduction">-</string>
+    <string name="grogshop_reality_money">Bayar</string>
+    <string name="grogshop_submit_order">Hantar</string>
+    <string name="jifen_init">Please enter the credit</string>
+    <string name="hotel_ruzhu">In</string>
+    <string name="hotel_likai">Out</string>
+    <string name="hotel_des">Day</string>
+
+    <!-- 附近弹框 -->
+    <string name="sort_one">Intelligent ordering</string>
+    <string name="sort_two">Nearest</string>
+    <string name="sort_three">Best score</string>
+    <string name="sort_four">Highest popularity</string>
+    <string name="sort">Sort</string>
+
+    <!-- 我的订单分类弹框 -->
+    <string name="my_order_pop_all">All</string>
+    <string name="my_order_pop_group">group-buying</string>
+    <string name="my_order_pop_daigou">Membeli</string>
+    <string name="my_order_pop_hotel">Hotel</string>
+
+    <!-- 我的订单状态弹框 -->
+    <string name="my_order_pop_await_pay">paid</string>
+    <string name="my_order_pop_await_consumption">consume</string>
+    <string name="my_order_pop_await_remark">comment</string>
+    <string name="my_order_pop_finish">Complete</string>
+    <string name="my_order_pop_cancel">Canceled</string>
+
+    <!-- 全部分类 -->
+    <string name="all_item">All</string>
+
+    <!-- 评论列表 -->
+    <string name="comment_list">All</string>
+
+    <!-- 发布评论 -->
+    <string name="post_comment">Publish comments</string>
+    <string name="post_comment_hint_txt">Give a good praise is to our support</string>
+    <string name="post_comment_txt">Please say something^-^</string>
+    <string name="post_comment_grade">Score</string>
+    <string name="post_comment_submit">Hantar</string>
+    <string name="uploading">Uploading...</string>
+    <string name="release_success">kejayaan</string>
+
+    <!-- 外卖订单 -->
+    <string name="takeawayorder">外卖订单</string>
+    <string name="takeawayorder_shipping_rates">配送费</string>
+    <string name="takeawayorder_total">总计</string>
+    <string name="takeawayorder_transport_time">送达时间</string>
+    <string name="takeawayorder_phone">手机</string>
+    <string name="takeawayorder_linkman">联系人</string>
+    <string name="takeawayorder_remark">备注</string>
+    <string name="takeawayorder_fill_in">填写其他要求</string>
+    <string name="takeawayorder_use_integral">使用积分</string>
+    <string name="takeawayorder_deduction">抵扣</string>
+    <string name="takeawayorder_reality_money">实付金额</string>
+    <string name="takeawayorder_submit_order">提交订单</string>
+    <!-- 团购支付 -->
+    <string name="grouporder_pay_count">Kuantiti</string>
+    <string name="grouporder_pay_total">Jumlah</string>
+    <string name="grouporder_pay_order_number">Order No.</string>
+    <string name="grouporder_pay_consumption_code">Consumer code</string>
+    <string name="grouporder_pay_phone">telefon</string>
+    <string name="grouporder_pay_order_time">masa Order</string>
+    <string name="grouporder_pay_paytime">Bayartm</string>
+    <string name="grouporder_pay_use_time">Gunakan masa</string>
+    <string name="grouporder_pay_use_integral">menggunakan kredit</string>
+    <string name="grouporder_pay_deduction">-</string>
+    <string name="grouporder_pay_reality_money">Bayar</string>
+    <string name="grouporder_pay_pay_order">Bayar</string>
+    <!-- 酒店支付 -->
+    <string name="grogshop_pay_order">Hotel order</string>
+    <string name="grogshop_pay_name">Hotel</string>
+    <string name="grogshop_pay_type">Type</string>
+    <string name="grogshop_pay_date">Date</string>
+    <string name="grogshop_pay_unit_price">Price</string>
+    <string name="grogshop_pay_pay">Advance</string>
+    <string name="grogshop_pay_count">Amount</string>
+    <string name="grogshop_pay_total">Jumlah</string>
+    <string name="grogshop_pay_order_number">Order No.</string>
+    <string name="grogshop_pay_consumption_code">Consumer code</string>
+    <string name="grogshop_pay_phone">telefon</string>
+    <string name="grogshop_pay_linkman">Name</string>
+    <string name="grogshop_pay_remark">Note</string>
+    <string name="grogshop_pay_fill_in">Fill in other requirements</string>
+    <string name="grogshop_pay_order_time">masa Order</string>
+    <string name="grogshop_pay_paytime">Bayartm</string>
+    <string name="grogshop_pay_use_time">Gunakan masa</string>
+    <string name="grogshop_pay_use_integral">menggunakan kredit</string>
+    <string name="grogshop_pay_deduction">-</string>
+    <string name="grogshop_pay_reality_money">Bayar</string>
+    <string name="cancle_order">Cancel</string>
+    <string name="grogshop_pay_pay_finish">Bayared</string>
+    <!-- 外卖订单 -->
+    <string name="takeaway_pay_shipping_rates">配送费</string>
+    <string name="takeaway_pay_total">Jumlah</string>
+    <string name="takeaway_pay_order_number">Order No.</string>
+    <string name="takeaway_pay_consumption_code">Consumer code</string>
+    <string name="takeaway_pay_transport_time">送达时间</string>
+    <string name="takeaway_pay_phone">telefon</string>
+    <string name="takeaway_pay_linkman">Name</string>
+    <string name="takeaway_pay_remark">Note</string>
+    <string name="takeaway_pay_fill_in">Fill in other requirements</string>
+    <string name="takeaway_pay_order_time">masa Order</string>
+    <string name="takeaway_pay_paytime">Bayartm</string>
+    <string name="takeaway_pay_use_time">Gunakan masa</string>
+    <string name="takeaway_pay_use_integral">menggunakan kredit</string>
+    <string name="takeaway_pay_deduction">-</string>
+    <string name="takeaway_pay_reality_money">Bayar</string>
+    <string name="takeaway_pay_evaluate">Commemnt</string>
+    <!-- 代购订单 -->
+    <string name="insteadshopping">Membeli order</string>
+    <string name="insteadshopping_order_count">Amount</string>
+    <string name="insteadshopping_order_postage">Postage</string>
+    <string name="insteadshopping_order_total">Jumlah</string>
+    <string name="insteadshopping_order_phone">telefon</string>
+    <string name="insteadshopping_order_linkman">Name</string>
+    <string name="insteadshopping_order_remark">Note</string>
+    <string name="insteadshopping_order_fill_in">Fill in other requirements</string>
+    <string name="insteadshopping_order_integral">menggunakan kredit</string>
+    <string name="insteadshopping_order_deduction">-</string>
+    <string name="insteadshopping_order_reality_money">Bayar</string>
+    <string name="insteadshopping_order_submit_order">Hantar</string>
+    <!-- 代购支付 -->
+    <string name="insteadshopping_pay_postage">Postage</string>
+    <string name="insteadshopping_pay_shuliang">Amount</string>
+    <string name="insteadshopping_pay_total">Jumlah</string>
+    <string name="insteadshopping_pay_order_number">Order No.</string>
+    <string name="insteadshopping_pay_consumption_code">Consumer code</string>
+    <string name="insteadshopping_pay_phone">telefon</string>
+    <string name="insteadshopping_pay_linkman">Name</string>
+    <string name="insteadshopping_pay_remark">Note</string>
+    <string name="insteadshopping_pay_fill_in">Fill in other requirements</string>
+    <string name="insteadshopping_pay_order_time">masa Order</string>
+    <string name="insteadshopping_pay_paytime">Bayartm</string>
+    <string name="insteadshopping_pay_use_time">Gunakan masa</string>
+    <string name="insteadshopping_pay_use_integral">menggunakan kredit</string>
+    <string name="insteadshopping_pay_deduction">-</string>
+    <string name="insteadshopping_pay_reality_money">Bayar</string>
+    <string name="insteadshopping_pay_evaluate">Commemnt</string>
+    <!-- 删除弹框 -->
+    <string name="delect_dialog">confirm deletion</string>
+    <string name="delect_dialog_yes">Yes</string>
+    <string name="delect_dialog_no">No</string>
+    <!-- 财务管理 -->
+    <string name="financial_management">Akaun tunai</string>
+    <string name="financial_management_balance">Balance</string>
+    <string name="financial_management_recharge">Recharge</string>
+    <string name="financial_management_details">Detail</string>
+    <string name="financial_management_withdraw">pengeluaran</string>
+
+    <!-- 支付订单 -->
+    <string name="pay_order">Bayar</string>
+    <string name="pay_order_zfb">Alipay</string>
+    <string name="pay_order_palpay">Palpay</string>
+    <string name="pay_order_balance">Balance</string>
+
+    <!-- 提现到银行卡 -->
+    <string name="withdraw_card">pengeluaran</string>
+    <string name="withdraw_card_money">Amount</string>
+    <string name="withdraw_card_cardid">Card number</string>
+    <string name="withdraw_card_name">Name</string>
+    <string name="withdraw_card_submit">Hantar</string>
+    <string name="withdrawcard_money_des">Please enter the cash withdrawal amount</string>
+    <string name="withdrawcard_money_des1">Cash withdrawals require Lebih than 0</string>
+    <string name="withdrawcard_code_des">Please enter the card number</string>
+    <string name="withdrawcard_name_des">Please enter your name</string>
+    <string name="withdrawcard_release_des">Permohonan telah dikemukakan, sila tunggu 2-5 hari</string>
+
+    <!-- 账户充值 -->
+    <string name="recharge">Recharge</string>
+    <string name="recharge_money">Amount</string>
+    <string name="recharge_palpay">Palpay</string>
+    <string name="recharge_zfb">Alipay</string>
+    <!-- 财务明细 -->
+    <string name="finance_detail">Detail</string>
+    <!-- 关于我们 -->
+    <string name="about_us">About us</string>
+    <!-- 旅行小密 -->
+    <string name="travel">Travel</string>
+    <!-- 旅行小密 -->
+    <string name="travel_details">Details</string>
+    <!-- 酒店详情 -->
+    <string name="hotel_detail">Details</string>
+    <string name="hotel_detail_order">Book</string>
+    <!-- 酒店 -->
+    <string name="hotel_list">Hotel</string>
+    <!-- 团购 -->
+    <string name="tuangou">Discount</string>
+    <string name="tuangou_near">nearby</string>
+    <!-- 商家详情 -->
+    <string name="shop_detail">Details</string>
+    <string name="shop_detail_time">Business Hours:</string>
+    <string name="shop_detail_favorable">Daftar</string>
+    <!-- 选择城市 -->
+    <string name="select_city">City</string>
+    <!-- 选择语言 -->
+    <string name="select_language">Bahasan</string>
+    <!-- 搜索 -->
+    <string name="search">Carian</string>
+    <string name="search_content">kata kunci</string>
+    <string name="search_text">results</string>
+    <string name="search_type1">Article</string>
+    <string name="search_type2">Shop</string>
+    <string name="search_type3">Discount</string>
+    <string name="search_type4">Membeli</string>
+    <string name="search_type5">Hotel</string>
+    <!-- 商品详情 -->
+    <string name="good_detail">Details</string>
+    <!-- 团购详情 -->
+    <string name="tuangou_detail">Details</string>
+    <!-- 图文详情 -->
+    <string name="graphic_detail">Details</string>
+    <!-- 商家订单 -->
+    <string name="business_order">Pesanan perniagaan</string>
+    <!-- 我的订单 -->
+    <string name="my_order">Pesanan</string>
+    <!-- 商家订单详情 -->
+    <string name="business_order_details">Pesanan perniagaan</string>
+    <!-- 代购 -->
+    <string name="Hotboom">Membeli</string>
+    <string name="Hotboom_brand">Jenama</string>
+
+    <!-- 积分明细 -->
+    <string name="my_integral">Detail</string>
+    <!-- 收藏列表 -->
+    <string name="my_collect">Kegemaran</string>
+    <string name="recent_photos">Foto</string>
+    <!-- 紧急求助 -->
+    <string name="jinjiqiuzhu">SOS</string>
+    <string name="lvxingxiaomi">Travel</string>
+    <string name="huobiduihuan">Pertukaran</string>
+    <string name="zhuanxiangtese">Ciri-ciri</string>
+    <string name="xiuxianyule">Leisure</string>
+    <string name="chuxingfuwu">Trip</string>
+    <string name="suishenfanyi">Terjemahan</string>
+    <string name="meishi">Makanan</string>
+    <string name="all">All</string>
+
+    <!-- 意见反馈 -->
+    <string name="feedback">Maklumbalas</string>
+    <string name="feedback_hint">Thank you for helping us to improve the platform</string>
+    <string name="feedback_submit">Hantar</string>
+    <string name="erweima">QR code</string>
+    <string name="taking_pictures">Photograph</string>
+
+    <!-- 首页 -->
+    <string name="home_selled">Sold</string>
+
+    <!-- 地图 -->
+    <string name="map_title">Map</string>
+
+    <!-- 美食 -->
+    <string name="food_comment_des">Scores</string>
+    <string name="food_near">kawasan</string>
+
+    <!-- 酒店详情 -->
+    <string name="hotel_people">/person </string>
+    <string name="hotel_price_des">+</string>
+
+    <!-- 酒店列表 -->
+    <string name="hotel_comment_des">Comments </string>
+
+    <!-- 订单状态 -->
+    <string name="order_status_complete">Completed</string>
+    <string name="order_status_cancle">Canceled</string>
+    <string name="order_status_pay">Bayar</string>
+    <string name="order_status_payed">Bayared</string>
+    <string name="order_status_failed">Bayarment failure</string>
+    <string name="order_status_comment">Comments</string>
+    <string name="order_status_use">Consumption</string>
+    <string name="order_status_release_comment">Comments</string>
+    <string name="order_status_pay_order">Bayar</string>
+
+    <!-- 订单支付 -->
+    <string name="pay_paying">Bayar...</string>
+    <string name="pay_success">kejayaan</string>
+
+    <!-- 优惠买单 -->
+    <string name="favorable_des">Senarai ini hanya boleh digunakan pada kebanyakan</string>
+    <string name="favorable_credit">Credits</string>
+    <string name="favorable_des1">Anda telah memasukkan kamiran lebih mata anda, sila masukkan yang kurang daripada</string>
+    <string name="favorable_num">kuantiti!</string>
+    <string name="favorable_money">Sila masukkan jumlah penggunaan!</string>
+
+    <!-- 旅行小秘 -->
+    <string name="travel_des">Baca</string>
+    <string name="travel_time"></string>
+
+    <!-- 商家订单 -->
+    <string name="business_order_des">Input consumption code</string>
+    <string name="business_order_des1">Complete</string>
+    <string name="business_order_des2">Complete</string>
+    <string name="business_order_des3">Input consumption code!</string>
+
+    <!-- 代购详情 -->
+    <string name="gooddetail_buy">Membeli</string>
+    <string name="gooddetail_buy_des">notis</string>
+    <!-- 拍照 -->
+    <string name="photo_take">gambar</string>
+    <string name="photo_picker">Pilih dari album</string>
+    <string name="photo_cancle">membatalkan</string>
+    <string name="look_detail">Lihat butiran</string>
+    <string name="look_Lebih">Lebih</string>
+    <string name="translate_des">bercakap dengan kuat</string>
+    <string name="progress_noLebihresult">Anda berus terlalu cepat, tidak lebih!</string>
+    <string name="malaixiya">Malaysia</string>
+    <string name="tuangoushangjia">Pelanggan atau perniagaan</string>
+    <string name="buy">pembelian</string>
+    <string name="score">Point</string>
+    <string name="update_title">Versi baru</string>
+    <string name="update">Update</string>
+    <string name="register_email">Mailbox</string>
+    <string name="editinfo_email_des1">Sila masukkan e-mel</string>
+    <string name="editinfo_email_des2">Sila masukkan alamat emel yang sah</string>
+    <string name="new_email">Peti Mel baru</string>
+    <string name="tuandou_shanghu">Perniagaan atau membeli</string>
+    <string name="help_detail">bantuan Maklumat</string>
+    <string name="order_status_release_comment_des">Tunggu ulasan pengguna</string>
+    <string name="order_status_pay_des">Menunggu pengguna untuk membayar</string>
+    <string name="recharge_des">Sila masukkan jumlah aliran masuk</string>
+    <string name="recharge_des1">Jumlah Recharge tidak boleh 0</string>
+    <string name="recharge_success">caj semula yang berjaya</string>
+
+</resources>

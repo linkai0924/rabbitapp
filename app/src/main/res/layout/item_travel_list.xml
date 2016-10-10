@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp" >
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/model_lvxing" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_44_black_big"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/des"
+                style="@style/text_66_black_small"
+                android:layout_marginTop="9dp"
+                android:ellipsize="end"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp" >
+
+                <TextView
+                    android:id="@+id/views"
+                    style="@style/text_66_black_small"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/adddateline"
+                    style="@style/text_66_black_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+</LinearLayout>

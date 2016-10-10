@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_leftandright" >
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:text="@string/withdraw_card_money" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/money"
+                    style="@style/text_44_black_big"
+                    android:background="@color/white"
+                    android:hint="@string/withdrawcard_money_des"
+                    android:inputType="number"
+                    android:gravity="right"
+                    android:textColor="@color/text_2B_green" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_leftandright" >
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:text="@string/withdraw_card_cardid" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/cardid"
+                    style="@style/text_44_black_big"
+                    android:background="@color/white"
+                    android:hint="@string/withdrawcard_code_des"
+                    android:inputType="number"
+                    android:gravity="right"
+                    android:textColor="@color/text_2B_green" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_leftandright" >
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:text="@string/withdraw_card_name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/text_44_black_big"
+                    android:background="@color/white"
+                    android:hint="@string/withdrawcard_name_des"
+                    android:gravity="right"
+                    android:textColor="@color/text_2B_green" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/fillet_10_green_bg"
+            android:text="@string/withdraw_card_submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+    </LinearLayout>
+
+</LinearLayout>

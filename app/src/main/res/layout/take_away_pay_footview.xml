@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_shipping_rates" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="￥7" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_total" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_44_black_big"
+                android:text="￥156"
+                android:textColor="@color/text_2B_green" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_order_number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="2151235484212" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_consumption_code" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_44_black_big"
+                android:text="2300 58452 54845"
+                android:textColor="@color/text_2B_green" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/erweima" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="李四" />
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:layout_marginLeft="5dp"
+                    android:text="15188888888" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="中国黑龙江省齐齐哈尔市富拉尔基区" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_transport_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="15:30" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_phone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="15888888888" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_linkman" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="张三" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_remark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:text="@string/takeaway_pay_fill_in" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_order_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="2016-2-25 13:55" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_paytime" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="-" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_use_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="-" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/takeaway_pay_use_integral" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text_99_grey_medium"
+                android:text="200" />
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:layout_marginLeft="8dp"
+                android:text="@string/takeaway_pay_deduction"
+                android:textColor="@color/text_2B_green" />
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:layout_marginLeft="5dp"
+                android:text="￥2"
+                android:textColor="@color/text_2B_green" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_99_grey_medium"
+            android:text="@string/takeaway_pay_reality_money" />
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:layout_marginLeft="8dp"
+            android:text="@string/money_symbol"
+            android:textColor="@color/text_2B_green" />
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:layout_marginLeft="5dp"
+            android:text="197"
+            android:textColor="@color/text_2B_green" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logout"
+        style="@style/text_white_medium"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/fillet_10_pink_bg"
+        android:text="@string/takeaway_pay_evaluate" />
+
+</LinearLayout>

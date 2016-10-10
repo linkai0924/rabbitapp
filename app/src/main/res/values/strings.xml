@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LazyBunny</string>
+    <string name="progress_doing">加载中...</string>
+    <string name="wipe_cache_clear">缓存清理成功</string>
+    <string name="money_hint">￥0</string>
+    <string name="money_symbol">￥</string>
+    <string name="income">收入</string>
+    <string name="expend">支出</string>
+    <string name="inexpensive">优惠</string>
+    <string name="home_title">首页</string>
+    <string name="order_title">订单</string>
+    <string name="my_title">我的</string>
+    <string name="myfragment_editinfo">编辑资料</string>
+    <string name="myfragment_systemmsg">系统消息</string>
+    <string name="myfragment_business_order">商家订单</string>
+    <string name="myfragment_comment">我的评价</string>
+    <string name="myfragment_shipping_address">配送地址</string>
+    <string name="myfragment_my_order">订单</string>
+    <string name="myfragment_integral">积分</string>
+    <string name="myfragment_collect">收藏</string>
+    <string name="myfragment_current_account">现金账户</string>
+    <string name="myfragment_logout">退出当前账户</string>
+    <string name="exit_des">再按一次退出程序</string>
+    <string name="login_des">登录中...</string>
+    <string name="submiting">提交中...</string>
+    <string name="submit_success">提交成功</string>
+    <string name="more">更多</string>
+    <!-- 系统消息 -->
+    <string name="systemmsg">系统消息</string>
+    <!-- 猜你喜欢 -->
+    <string name="guesslike">猜你喜欢</string>
+    <!-- 编辑资料 -->
+    <string name="editinfo">编辑资料</string>
+    <string name="editinfo_edithead">修改头像</string>
+    <string name="editinfo_nickname">昵称</string>
+    <string name="editinfo_passwordr">密码</string>
+    <string name="editinfo_phone">手机</string>
+    <string name="editinfo_name_des">昵称不能为空</string>
+    <string name="editinfo_name_des1">昵称位数不能超过14位</string>
+    <string name="editinfo_head_success">更换头像成功</string>
+    <string name="editinfo_success">修改成功</string>
+    <string name="editinfo_tel_des">手机号格式不正确</string>
+    <string name="editinfo_tel_des1">请输入手机号</string>
+    <string name="editinfo_code_des">请输入验证码 </string>
+    <string name="editinfo_code_release">重新发送</string>
+    <string name="editinfo_pswd_des">密码为6-15位字母和数字</string>
+    <string name="editinfo_pswd_des1">密码中必须包含字母</string>
+
+    <!-- 修改昵称 -->
+    <string name="edit_nickname">昵称</string>
+    <string name="edit_save">保存修改</string>
+    <string name="edit_input_nickname">请输入昵称</string>
+    <!-- 修改手机 -->
+    <string name="edit_phone">旧手机</string>
+    <string name="edit_new_phone">新手机</string>
+    <string name="edit_phone_password">密码</string>
+    <string name="edit_phone_code">验证码	</string>
+    <string name="edit_phone_hint_phone">请输入旧手机号</string>
+    <string name="edit_phone_hint_new_phone">请输入新手机号</string>
+    <string name="edit_phone_hint_password">请输入密码</string>
+    <string name="edit_phone_hint_code">请输入验证码</string>
+    <string name="edit_phone_get_code">获取验证码</string>
+    <string name="edit_phone_submit">提交</string>
+    <string name="businessorder_classify">分类</string>
+    <string name="businessorder_state">状态</string>
+    <string name="item_order_finished">已完成</string>
+    <string name="item_order_ordertime">下单时间</string>
+    <string name="businessorderdetails_amount">数量</string>
+    <string name="businessorderdetails_total">总计</string>
+    <string name="businessorderdetails_ordernumber">订单号</string>
+    <string name="businessorderdetails_consumercode">消费码</string>
+    <string name="businessorderdetails_putconsumercode">（请输入或扫描二维码）</string>
+    <string name="businessorderdetails_phone">手机</string>
+    <string name="businessorderdetails_odertime">下单时间</string>
+    <string name="businessorderdetails_paytime">支付时间</string>
+    <string name="businessorderdetails_hours_of_use">使用时间</string>
+    <string name="businessorderdetails_hours_of_integral">使用积分</string>
+    <string name="businessorderdetails_hours_amountpaid">实付金额</string>
+    <string name="businessorderdetails_btn_putconsumercode">输入消费码</string>
+    <!-- 配送地址 -->
+    <string name="shippingaddressactivity">配送地址</string>
+    <string name="shippingaddressactivity_addadress">新增配送地址</string>
+    <string name="item_shippingaddress_default">默认</string>
+    <string name="addshippingaddress_region">地区</string>
+    <string name="addshippingaddress_address">地址</string>
+    <string name="addshippingaddress_phone">手机</string>
+    <string name="addshippingaddress_name">姓名</string>
+    <string name="addshippingaddress_postcode">邮编</string>
+    <string name="addshippingaddress_default">默认</string>
+    <string name="addshippingaddress_save">保存</string>
+    <string name="addshippingaddress_input_region">请输入地区</string>
+    <string name="addshippingaddress_input_address">请输入地址</string>
+    <string name="addshippingaddress_input_phone">请输入手机</string>
+    <string name="addshippingaddress_input_name">请输入姓名</string>
+    <string name="addshippingaddress_input_postcode">请输入邮编</string>
+    <!-- 翻译助手 -->
+    <string name="translate">翻译助手</string>
+    <string name="translate_hint">请输入中文···</string>
+    <string name="translate_content_hint">请输入翻译内容</string>
+    <string name="translate_text">中文 </string>
+    <string name="translate_language">语言</string>
+    <string name="translate_translate">翻译</string>
+    <string name="translate_result">翻译结果</string>
+    <string name="translate_ing">翻译中...</string>
+
+    <!-- 选择语言 -->
+    <string name="SelectLanguage_chinese">中文</string>
+    <string name="translate_chinese">中文</string>
+    <string name="SelectLanguage_english">English</string>
+    <string name="translate_english">英文</string>
+    <string name="SelectLanguage_japanese">日本語</string>
+    <string name="translate_japanese">日语</string>
+    <!-- 阿拉伯 -->
+    <string name="SelectLanguage_arab">العربية</string>
+    <string name="translate_arab">阿拉伯语</string>
+    <!-- 朝鲜 -->
+    <string name="SelectLanguage_korea">한국어</string>
+    <string name="translate_korea">韩语</string>
+    <!-- 菲律宾 -->
+    <string name="SelectLanguage_philippines">Pilipino</string>
+    <string name="translate_philippines">菲律宾语</string>
+    <!-- 印尼 -->
+    <string name="SelectLanguage_indonesia">Indonesia</string>
+    <string name="translate_indonesia">印尼语</string>
+    <!-- 西班牙 -->
+    <string name="SelectLanguage_spain">espanol</string>
+    <string name="translate_spain">西班牙语</string>
+    <!-- 意大利 -->
+    <string name="SelectLanguage_italy">In Italia</string>
+    <string name="translate_italy">意大利语</string>
+    <string name="more_about_us">关于我们</string>
+    <string name="more_langswitcher">语言切换</string>
+    <string name="more_feedback">意见反馈</string>
+    <string name="more_richscan">扫一扫</string>
+    <string name="more_version_updating">版本更新</string>
+    <string name="more_help">帮助中心</string>
+    <string name="more_wipe_cache">清除缓存</string>
+    <!-- 全部分类 -->
+    <string name="all_item_hot">热门</string>
+    <string name="all_item_halal_food">清真美食</string>
+
+    <!-- 登陆 -->
+    <string name="login_name_hint">昵称/姓名</string>
+    <string name="login_name">用户名</string>
+    <string name="login_pswd_hint">请输入密码</string>
+    <string name="login_pswd">密码</string>
+    <string name="login">登陆</string>
+    <string name="login_forget_pswd">忘记密码</string>
+    <string name="login_register">注册</string>
+    <string name="login_name_des">请输入昵称/姓名</string>
+
+    <!-- 注册 -->
+    <string name="register_phone_hint">请输入手机号</string>
+    <string name="register_phone">手机</string>
+    <string name="register_name_hint">请输入用户名</string>
+    <string name="register_name">昵称</string>
+    <string name="register_code_hint">请输入验证码</string>
+    <string name="register_code">验证码</string>
+    <string name="register">注册</string>
+    <string name="register_get_code">获取验证码</string>
+    <string name="register_pswd_des">请输入8位以内用户名</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_email">邮箱</string>
+
+    <!-- 找回密码 -->
+    <string name="forget_pswd">密码重置</string>
+    <string name="forget_pswd_newpswd">新密码</string>
+    <string name="forget_pswd_newpswd_hint">请输入新密码</string>
+
+    <!-- 优惠买单 -->
+    <string name="favorable">优惠买单</string>
+    <string name="favorable_expendamount">消费总额</string>
+    <string name="favorable_use_integral">使用积分</string>
+    <string name="favorable_reality_money">实付金额</string>
+    <string name="favorable_deduction">抵扣</string>
+    <string name="favorable_confirm_payment">确认支付</string>
+    <!-- 团购订单 -->
+    <string name="grouporder">团购订单</string>
+    <string name="grouporder_count">数量</string>
+    <string name="grouporder_total">总计</string>
+    <string name="grouporder_phone">手机</string>
+    <string name="grouporder_use_integral">使用积分</string>
+    <string name="grouporder_reality_money">实付金额</string>
+    <string name="grouporder_deduction">抵扣</string>
+    <string name="grouporder_submit_order">提交订单</string>
+    <!-- 酒店订单 -->
+    <string name="grogshop_name">名称</string>
+    <string name="grogshop_type">房型</string>
+    <string name="grogshop_date">日期</string>
+    <string name="grogshop_unit_price">单价</string>
+    <string name="grogshop_pay">应付</string>
+    <string name="grogshop_count">数量</string>
+    <string name="grogshop_total">总计</string>
+    <string name="grogshop_phone">手机</string>
+    <string name="grogshop_linkman">联系人</string>
+    <string name="grogshop_remark">备注</string>
+    <string name="grogshop_fill_in">填写其他要求</string>
+    <string name="grogshop_use_integral">使用积分</string>
+    <string name="grogshop_deduction">抵扣</string>
+    <string name="grogshop_reality_money">实付金额</string>
+    <string name="grogshop_submit_order">提交订单</string>
+    <string name="jifen_init">请输入积分</string>
+    <string name="hotel_ruzhu">入住</string>
+    <string name="hotel_likai">离开</string>
+    <string name="hotel_des">晚</string>
+
+    <!-- 附近弹框 -->
+    <string name="sort_one">智能排序</string>
+    <string name="sort_two">离我最近</string>
+    <string name="sort_three">口碑最好</string>
+    <string name="sort_four">人气最高</string>
+    <string name="sort">排序</string>
+
+    <!-- 我的订单分类弹框 -->
+    <string name="my_order_pop_all">全部</string>
+    <string name="my_order_pop_group">团购</string>
+    <string name="my_order_pop_daigou">代购</string>
+    <string name="my_order_pop_hotel">酒店</string>
+
+    <!-- 我的订单状态弹框 -->
+    <string name="my_order_pop_await_pay">待支付</string>
+    <string name="my_order_pop_await_consumption">待消费</string>
+    <string name="my_order_pop_await_remark">待点评</string>
+    <string name="my_order_pop_finish">已完成</string>
+    <string name="my_order_pop_cancel">已取消</string>
+
+    <!-- 全部分类 -->
+    <string name="all_item">全部分类</string>
+
+    <!-- 评论列表 -->
+    <string name="comment_list">全部评论</string>
+
+    <!-- 发布评论 -->
+    <string name="post_comment">发布评论</string>
+    <string name="post_comment_hint_txt">给个好评是对我们的支持</string>
+    <string name="post_comment_txt">请说些什么吧^-^</string>
+    <string name="post_comment_grade">评分</string>
+    <string name="post_comment_submit">提交</string>
+    <string name="uploading">上传中...</string>
+    <string name="release_success">发布成功</string>
+
+    <!-- 外卖订单 -->
+    <string name="takeawayorder">外卖订单</string>
+    <string name="takeawayorder_shipping_rates">配送费</string>
+    <string name="takeawayorder_total">总计</string>
+    <string name="takeawayorder_transport_time">送达时间</string>
+    <string name="takeawayorder_phone">手机</string>
+    <string name="takeawayorder_linkman">联系人</string>
+    <string name="takeawayorder_remark">备注</string>
+    <string name="takeawayorder_fill_in">填写其他要求</string>
+    <string name="takeawayorder_use_integral">使用积分</string>
+    <string name="takeawayorder_deduction">抵扣</string>
+    <string name="takeawayorder_reality_money">实付金额</string>
+    <string name="takeawayorder_submit_order">提交订单</string>
+    <!-- 团购支付 -->
+    <string name="grouporder_pay_count">数量</string>
+    <string name="grouporder_pay_total">总计</string>
+    <string name="grouporder_pay_order_number">订单号</string>
+    <string name="grouporder_pay_consumption_code">消费码</string>
+    <string name="grouporder_pay_phone">手机</string>
+    <string name="grouporder_pay_order_time">下单时间</string>
+    <string name="grouporder_pay_paytime">支付时间</string>
+    <string name="grouporder_pay_use_time">使用时间</string>
+    <string name="grouporder_pay_use_integral">使用积分</string>
+    <string name="grouporder_pay_deduction">抵扣</string>
+    <string name="grouporder_pay_reality_money">实付金额</string>
+    <string name="grouporder_pay_pay_order">支付订单</string>
+    <!-- 酒店支付 -->
+    <string name="grogshop_pay_order">酒店订单</string>
+    <string name="grogshop_pay_name">名称</string>
+    <string name="grogshop_pay_type">房型</string>
+    <string name="grogshop_pay_date">日期</string>
+    <string name="grogshop_pay_unit_price">单价</string>
+    <string name="grogshop_pay_pay">应付</string>
+    <string name="grogshop_pay_count">数量</string>
+    <string name="grogshop_pay_total">总计</string>
+    <string name="grogshop_pay_order_number">订单号</string>
+    <string name="grogshop_pay_consumption_code">消费码</string>
+    <string name="grogshop_pay_phone">手机</string>
+    <string name="grogshop_pay_linkman">联系人</string>
+    <string name="grogshop_pay_remark">备注</string>
+    <string name="grogshop_pay_fill_in">填写其他要求</string>
+    <string name="grogshop_pay_order_time">下单时间</string>
+    <string name="grogshop_pay_paytime">支付时间</string>
+    <string name="grogshop_pay_use_time">使用时间</string>
+    <string name="grogshop_pay_use_integral">使用积分</string>
+    <string name="grogshop_pay_deduction">抵扣</string>
+    <string name="grogshop_pay_reality_money">实付金额</string>
+    <string name="cancle_order">取消订单</string>
+    <string name="grogshop_pay_pay_finish">支付完成</string>
+    <!-- 外卖订单 -->
+    <string name="takeaway_pay_shipping_rates">配送费</string>
+    <string name="takeaway_pay_total">总计</string>
+    <string name="takeaway_pay_order_number">订单号</string>
+    <string name="takeaway_pay_consumption_code">消费码</string>
+    <string name="takeaway_pay_transport_time">送达时间</string>
+    <string name="takeaway_pay_phone">手机</string>
+    <string name="takeaway_pay_linkman">联系人</string>
+    <string name="takeaway_pay_remark">备注</string>
+    <string name="takeaway_pay_fill_in">填写其他要求</string>
+    <string name="takeaway_pay_order_time">下单时间</string>
+    <string name="takeaway_pay_paytime">支付时间</string>
+    <string name="takeaway_pay_use_time">使用时间</string>
+    <string name="takeaway_pay_use_integral">使用积分</string>
+    <string name="takeaway_pay_deduction">抵扣</string>
+    <string name="takeaway_pay_reality_money">实付金额</string>
+    <string name="takeaway_pay_evaluate">发布评价</string>
+    <!-- 代购订单 -->
+    <string name="insteadshopping">代购订单</string>
+    <string name="insteadshopping_order_count">数量</string>
+    <string name="insteadshopping_order_postage">邮费</string>
+    <string name="insteadshopping_order_total">总计</string>
+    <string name="insteadshopping_order_phone">手机</string>
+    <string name="insteadshopping_order_linkman">联系人</string>
+    <string name="insteadshopping_order_remark">备注</string>
+    <string name="insteadshopping_order_fill_in">填写其他要求</string>
+    <string name="insteadshopping_order_integral">使用积分</string>
+    <string name="insteadshopping_order_deduction">抵扣</string>
+    <string name="insteadshopping_order_reality_money">实付金额</string>
+    <string name="insteadshopping_order_submit_order">提交订单</string>
+    <!-- 代购支付 -->
+    <string name="insteadshopping_pay_postage">邮费</string>
+    <string name="insteadshopping_pay_shuliang">数量</string>
+    <string name="insteadshopping_pay_total">总计</string>
+    <string name="insteadshopping_pay_order_number">订单号</string>
+    <string name="insteadshopping_pay_consumption_code">消费码</string>
+    <string name="insteadshopping_pay_phone">手机</string>
+    <string name="insteadshopping_pay_linkman">联系人</string>
+    <string name="insteadshopping_pay_remark">备注</string>
+    <string name="insteadshopping_pay_fill_in">填写其他要求</string>
+    <string name="insteadshopping_pay_order_time">下单时间</string>
+    <string name="insteadshopping_pay_paytime">支付时间</string>
+    <string name="insteadshopping_pay_use_time">使用时间</string>
+    <string name="insteadshopping_pay_use_integral">使用积分</string>
+    <string name="insteadshopping_pay_deduction">抵扣</string>
+    <string name="insteadshopping_pay_reality_money">实付金额</string>
+    <string name="insteadshopping_pay_evaluate">发布评价</string>
+    <!-- 删除弹框 -->
+    <string name="delect_dialog">确认删除</string>
+    <string name="delect_dialog_yes">确认</string>
+    <string name="delect_dialog_no">取消</string>
+    <!-- 财务管理 -->
+    <string name="financial_management">财务管理</string>
+    <string name="financial_management_balance">账户余额</string>
+    <string name="financial_management_recharge">充值</string>
+    <string name="financial_management_details">财务明细</string>
+    <string name="financial_management_withdraw">提现到银行卡</string>
+
+    <!-- 支付订单 -->
+    <string name="pay_order">支付订单</string>
+    <string name="pay_order_zfb">支付宝(快捷支付)</string>
+    <string name="pay_order_palpay">Palpay</string>
+    <string name="pay_order_balance">账户余额</string>
+
+    <!-- 提现到银行卡 -->
+    <string name="withdraw_card">提现到银行卡</string>
+    <string name="withdraw_card_money">提现金额</string>
+    <string name="withdraw_card_cardid">卡号</string>
+    <string name="withdraw_card_name">姓名</string>
+    <string name="withdraw_card_submit">提交</string>
+    <string name="withdrawcard_money_des">请输入提现金额</string>
+    <string name="withdrawcard_money_des1">提现金额需大于0元</string>
+    <string name="withdrawcard_code_des">请输入卡号</string>
+    <string name="withdrawcard_name_des">请输入姓名</string>
+    <string name="withdrawcard_release_des">申请已经提交，请耐心等待2-5工作日</string>
+
+    <!-- 账户充值 -->
+    <string name="recharge">账户充值</string>
+    <string name="recharge_money">充值金额</string>
+    <string name="recharge_palpay">Palpay</string>
+    <string name="recharge_zfb">支付宝(快捷支付)</string>
+    <!-- 财务明细 -->
+    <string name="finance_detail">财务明细</string>
+    <!-- 关于我们 -->
+    <string name="about_us">关于我们</string>
+    <!-- 旅行小密 -->
+    <string name="travel">旅行小秘</string>
+    <!-- 旅行小密 -->
+    <string name="travel_details">旅游详情</string>
+    <!-- 酒店详情 -->
+    <string name="hotel_detail">酒店详情</string>
+    <string name="hotel_detail_order">预定</string>
+    <!-- 酒店 -->
+    <string name="hotel_list">酒店</string>
+    <!-- 团购 -->
+    <string name="tuangou">团购</string>
+    <string name="tuangou_near">附近团购</string>
+    <!-- 商家详情 -->
+    <string name="shop_detail">商家详情</string>
+    <string name="shop_detail_time">营业时间：</string>
+    <string name="shop_detail_favorable">优惠买单</string>
+    <!-- 选择城市 -->
+    <string name="select_city">选择城市</string>
+    <!-- 选择语言 -->
+    <string name="select_language">选择语言</string>
+    <!-- 搜索 -->
+    <string name="search">搜索</string>
+    <string name="search_content">请输入搜索内容</string>
+    <string name="search_text">个结果</string>
+    <string name="search_type1">资讯</string>
+    <string name="search_type2">商家</string>
+    <string name="search_type3">团购</string>
+    <string name="search_type4">代购</string>
+    <string name="search_type5">酒店</string>
+    <!-- 商品详情 -->
+    <string name="good_detail">商品详情</string>
+    <!-- 团购详情 -->
+    <string name="tuangou_detail">团购详情</string>
+    <!-- 图文详情 -->
+    <string name="graphic_detail">图文详情</string>
+    <!-- 商家订单 -->
+    <string name="business_order">商家订单</string>
+    <!-- 我的订单 -->
+    <string name="my_order">我的订单</string>
+    <!-- 商家订单详情 -->
+    <string name="business_order_details">商家订单详情</string>
+    <!-- 代购 -->
+    <string name="Hotboom">代购</string>
+    <string name="Hotboom_brand">品牌</string>
+
+    <!-- 积分明细 -->
+    <string name="my_integral">积分明细</string>
+    <!-- 收藏列表 -->
+    <string name="my_collect">收藏列表</string>
+    <string name="recent_photos">最近照片</string>
+    <!-- 紧急求助 -->
+    <string name="jinjiqiuzhu">紧急求助</string>
+    <string name="lvxingxiaomi">旅行小秘</string>
+    <string name="huobiduihuan">货币兑换</string>
+    <string name="zhuanxiangtese">专享特色</string>
+    <string name="xiuxianyule">休闲娱乐</string>
+    <string name="chuxingfuwu">出行服务</string>
+    <string name="suishenfanyi">随身翻译</string>
+    <string name="meishi">美食</string>
+    <string name="all">全部</string>
+
+    <!-- 意见反馈 -->
+    <string name="feedback">意见反馈</string>
+    <string name="feedback_hint">谢谢您帮我们改进平台</string>
+    <string name="feedback_submit">提交</string>
+    <string name="erweima">二维码</string>
+    <string name="taking_pictures">拍照</string>
+
+    <!-- 首页 -->
+    <string name="home_selled">已售</string>
+
+    <!-- 地图 -->
+    <string name="map_title">地图</string>
+
+    <!-- 美食 -->
+    <string name="food_comment_des">评分  </string>
+    <string name="food_near">附近 </string>
+
+    <!-- 酒店详情 -->
+    <string name="hotel_people">/人 </string>
+    <string name="hotel_price_des">起</string>
+
+    <!-- 酒店列表 -->
+    <string name="hotel_comment_des">评论 </string>
+
+    <!-- 订单状态 -->
+    <string name="order_status_complete">已完成</string>
+    <string name="order_status_cancle">已取消</string>
+    <string name="order_status_pay">待支付</string>
+    <string name="order_status_payed">已支付</string>
+    <string name="order_status_failed">支付失败</string>
+    <string name="order_status_comment">待点论</string>
+    <string name="order_status_use">待消费</string>
+    <string name="order_status_release_comment">发布评论</string>
+    <string name="order_status_pay_order">支付订单</string>
+
+    <!-- 订单支付 -->
+    <string name="pay_paying">支付中...</string>
+    <string name="pay_success">支付成功</string>
+
+    <!-- 优惠买单 -->
+    <string name="favorable_des">本单最多只能使用</string>
+    <string name="favorable_credit">积分</string>
+    <string name="favorable_des1">你输入的积分超过了您的积分,请输入小于</string>
+    <string name="favorable_num">的数字!</string>
+    <string name="favorable_money">请输入消费金额!</string>
+
+    <!-- 旅行小秘 -->
+    <string name="travel_des">阅读 </string>
+    <string name="travel_time">发布时间  </string>
+
+    <!-- 商家订单 -->
+    <string name="business_order_des">输入消费码</string>
+    <string name="business_order_des1">消费完成</string>
+    <string name="business_order_des2">已消费完成</string>
+    <string name="business_order_des3">请输入消费码!</string>
+
+    <!-- 代购详情 -->
+    <string name="gooddetail_buy">立即购买</string>
+    <string name="gooddetail_buy_des">购买须知</string>
+    <!-- 拍照 -->
+    <string name="photo_take">拍照</string>
+    <string name="photo_picker">从相册选择</string>
+    <string name="photo_cancle">取消</string>
+    <string name="look_detail">查看图文详情</string>
+    <string name="look_more">查看更多</string>
+    <string name="translate_des">请对准麦克风说话</string>
+    <string name="malaixiya">马来西亚文</string>
+    <string name="tuangoushangjia">团购或商家</string>
+    <string name="buy">购买</string>
+    <string name="score">分</string>
+    <string name="update_title">新版本</string>
+    <string name="update">更新</string>
+    <string name="editinfo_email_des1">请输入邮箱</string>
+    <string name="editinfo_email_des2">请输入正确的邮箱地址</string>
+    <string name="new_email">新邮箱</string>
+    <string name="tuandou_shanghu">商家或团购</string>
+    <string name="help_detail">帮助详情</string>
+    <string name="order_status_release_comment_des">等待用户点评</string>
+    <string name="order_status_pay_des">等待用户支付</string>
+    <string name="recharge_des">请输入充值金额!</string>
+    <string name="recharge_des1">充值金额不能为0!</string>
+    <string name="recharge_success">充值成功!</string>
+
+</resources>

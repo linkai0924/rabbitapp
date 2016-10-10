@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp" >
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="93dp"
+            android:layout_height="93dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            style="@style/text_white_small"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fillet_90_green_bg"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:textSize="@dimen/text_smaller"
+            android:text="@string/inexpensive" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/pic"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_44_black_big" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="bottom" >
+
+                <TextView
+                    android:id="@+id/price"
+                    style="@style/text_44_black_medium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/text_2B_green" />
+
+                <TextView
+                    android:id="@+id/adddateline"
+                    style="@style/text_66_black_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal" />
+
+</LinearLayout>

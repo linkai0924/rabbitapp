@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res/com.means.rabbit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_bg_color" />
+
+    <View style="@style/line_horizontal" />
+
+    <net.duohuo.dhroid.view.YToXImageView
+        android:id="@+id/pic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        my:heightToWidth="1.0" />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="8dp"
+        >
+    
+    <TextView 
+        android:id="@+id/title"
+        style="@style/text_44_black_big"
+        />
+    
+    <TextView 
+        android:id="@+id/des"
+        style="@style/text_66_black_small"
+        android:layout_marginTop="5dp"
+        />
+    
+    <View 
+        style="@style/line_horizontal"
+        android:layout_marginTop="8dp"
+        />
+    
+    <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" >
+
+                <TextView
+                    android:id="@+id/price"
+                    style="@style/text_44_black_medium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/text_2B_green" />
+
+                <TextView
+                    android:id="@+id/score"
+                    style="@style/text_66_black_small"
+                    android:layout_marginRight="10dp" />
+
+
+                <TextView
+                    android:id="@+id/catname"
+                    style="@style/text_66_black_small"/>
+            </LinearLayout>
+    </LinearLayout>
+ <View style="@style/line_horizontal" />
+</LinearLayout>

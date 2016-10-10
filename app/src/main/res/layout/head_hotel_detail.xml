@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="220dp" >
+
+        <com.means.rabbit.views.NomalGallery
+            android:id="@+id/gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:id="@+id/pic_count"
+            style="@style/text_white_small"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/num_bg"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/text_white_big"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/num_bg"
+            android:padding="2dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/text_44_black_biger"
+        android:layout_width="fill_parent"
+        android:padding="@dimen/padding_leftandright" />
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_leftandright" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_grey_location" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/text_66_black_medium"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/tel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_leftandright" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_tel" />
+
+        <TextView
+            android:id="@+id/tel"
+            style="@style/text_66_black_medium"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_leftandright" >
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            style="@style/roomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/comment_des"
+            style="@style/text_66_black_medium"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            android:id="@+id/label"
+            style="@style/text_66_black_medium" />
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_bg_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/hotel_detail_order" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:text="@string/hotel_ruzhu" />
+
+            <TextView
+                android:id="@+id/start_date"
+                style="@style/text_44_black_medium" />
+
+            <TextView
+                style="@style/text_44_black_medium"
+                android:layout_marginLeft="5dp"
+                android:text="@string/hotel_likai" />
+
+            <TextView
+                android:id="@+id/end_date"
+                style="@style/text_44_black_medium"
+                android:layout_marginRight="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <com.means.rabbit.views.HotelYudingView
+        android:id="@+id/yuding_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.means.rabbit.views.HotelYudingView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_bg_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_leftandright" >
+
+        <TextView
+            style="@style/text_44_black_medium"
+            android:text="@string/tuangou" />
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <com.means.rabbit.views.ShopDetailTuangouView
+        android:id="@+id/tuangou_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.means.rabbit.views.CommentView
+        android:id="@+id/comment_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/text_44_black_medium"
+        android:layout_width="fill_parent"
+        android:background="@color/app_bg_color"
+        android:padding="@dimen/padding_leftandright"
+        android:text="@string/tuangou_near" />
+
+</LinearLayout>

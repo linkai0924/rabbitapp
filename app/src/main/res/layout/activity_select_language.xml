@@ -1,0 +1,221 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <include layout="@layout/include_title_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/chinese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_chinese" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_english" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/japanese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_japanese" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/arab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_arab" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/korea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_korea" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/philippines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:visibility="gone"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_philippines" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/indonesia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_indonesia" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/spain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_spain" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/italy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setLanguage"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_big"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SelectLanguage_italy" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

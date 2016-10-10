@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_bg_color" />
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp" >
+
+        <TextView
+            style="@style/text_66_black_medium"
+            android:text="@string/guesslike" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" >
+
+            <ImageView
+                android:id="@+id/pic1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_meishi_two" />
+
+            <ImageView
+                android:id="@+id/pic2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/model_meishi_one" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+</LinearLayout>

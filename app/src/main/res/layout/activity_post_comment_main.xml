@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <include layout="@layout/include_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_leftandright" >
+
+        <EditText
+            android:id="@+id/content"
+            style="@style/text_44_black_small"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:hint="@string/post_comment_hint_txt"
+            android:textColorHint="@color/text_99_grey" />
+
+        <TextView
+            style="@style/text_white_small"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/padding_leftandright"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="@dimen/padding_leftandright"
+            android:background="@drawable/fillet_90_black_bg"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:padding="@dimen/padding_leftandright"
+            android:text="@string/post_comment_txt" />
+        
+         <android.support.v7.widget.RecyclerView
+            	android:id="@+id/recyclerView"
+            	android:layout_width="match_parent"
+            	android:layout_height="77dp"
+                android:scrollbars="none" />
+        
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_leftandright" >
+
+            <TextView
+                style="@style/text_44_black_small"
+                android:text="@string/post_comment_grade" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    style="@style/roomRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="1.5"
+                    android:stepSize="0.5" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+        style="@style/line_horizontal" />
+        
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/fillet_10_green_bg"
+            android:text="@string/post_comment_submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+        
+    </LinearLayout>
+
+</LinearLayout>

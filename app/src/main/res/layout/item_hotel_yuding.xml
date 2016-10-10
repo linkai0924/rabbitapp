@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp" >
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/text_44_black_big" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" >
+
+                <TextView
+                    android:id="@+id/des"
+                    style="@style/text_66_black_small"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/yuding"
+                    style="@style/text_white_big"
+                    android:background="@drawable/btn_red"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/hotel_detail_order" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom" >
+
+                <TextView
+                    android:id="@+id/price"
+                    style="@style/text_44_black_medium"
+                    android:gravity="left"
+                    android:textColor="@color/text_2B_green" />
+
+                <TextView
+                    android:id="@+id/pre_price"
+                    style="@style/text_66_black_small"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/hotel_red" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+
+</LinearLayout>

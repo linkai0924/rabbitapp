@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/fillet_10_white_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/chinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="setLanguage"
+            android:padding="@dimen/padding_leftandright" >
+
+            <TextView
+                style="@style/text_44_black_big"
+                android:layout_centerInParent="true"
+                android:text="@string/SelectLanguage_chinese" />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="setLanguage"
+            android:padding="@dimen/padding_leftandright" >
+
+            <TextView
+                style="@style/text_44_black_big"
+                android:layout_centerInParent="true"
+                android:text="@string/SelectLanguage_english" />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/malaixiya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="setLanguage"
+            android:padding="@dimen/padding_leftandright" >
+
+            <TextView
+                style="@style/text_44_black_big"
+                android:layout_centerInParent="true"
+                android:text="@string/malaixiya" />
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,347 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <include layout="@layout/include_title_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/text_44_black_medium"
+                    android:ellipsize="end"
+                    android:maxWidth="210dp"
+                    android:singleLine="true"
+                    android:text="珍珠温泉度假村" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/price"
+                        style="@style/text_99_grey_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_count" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/count"
+                        style="@style/text_99_grey_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_total" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/total_price"
+                        style="@style/text_44_black_big"
+                        android:textColor="@color/text_2B_green" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_order_number" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/code"
+                        style="@style/text_99_grey_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_consumption_code" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/ercode"
+                        style="@style/text_44_black_big"
+                        android:textColor="@color/text_2B_green" />
+
+                    <ImageView
+                        android:id="@+id/erweima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/erweima" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_phone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tel"
+                        style="@style/text_99_grey_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_order_time" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/order_time"
+                        style="@style/text_99_grey_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_paytime" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/pay_time"
+                        style="@style/text_99_grey_medium"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_use_time" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/use_time"
+                        style="@style/text_99_grey_medium"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:text="@string/grouporder_pay_use_integral" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/credit"
+                        style="@style/text_99_grey_medium" />
+
+                    <TextView
+                        style="@style/text_44_black_medium"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/grouporder_pay_deduction"
+                        android:textColor="@color/text_2B_green" />
+
+                    <TextView
+                        android:id="@+id/credit_s"
+                        style="@style/text_44_black_medium"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/money_hint"
+                        android:textColor="@color/text_2B_green" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_leftandright" >
+
+                <TextView
+                    style="@style/text_99_grey_medium"
+                    android:text="@string/grouporder_pay_reality_money" />
+
+                <TextView
+                    style="@style/text_44_black_medium"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/money_symbol"
+                    android:textColor="@color/text_2B_green" />
+
+                <TextView
+                    android:id="@+id/shifu"
+                    style="@style/text_44_black_medium"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/text_2B_green" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pay"
+                style="@style/text_white_medium"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:background="@drawable/fillet_10_pink_bg"
+                android:text="@string/grouporder_pay_pay_order"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/cancle"
+                style="@style/text_44_black_medium"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:text="@string/cancle_order" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

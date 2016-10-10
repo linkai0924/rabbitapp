@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/text_2B_green"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" >
+
+        <LinearLayout
+            android:id="@+id/city_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_location" />
+
+            <TextView
+                android:id="@+id/city"
+                style="@style/text_white_big"
+                android:layout_marginLeft="5dp"
+                android:text="南京" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="6dp"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_search" />
+
+            <TextView
+                style="@style/text_white_medium"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:singleLine="true"
+                android:text="@string/tuandou_shanghu" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/pic_translate"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:scaleType="center"
+            android:src="@drawable/icon_yuyin" />
+
+        <ImageView
+            android:id="@+id/top_erweima"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/icon_erweima" />
+    </LinearLayout>
+
+</LinearLayout>
