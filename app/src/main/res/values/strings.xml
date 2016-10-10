@@ -19,6 +19,7 @@
     <string name="myfragment_shipping_address">配送地址</string>
     <string name="myfragment_my_order">订单</string>
     <string name="myfragment_integral">积分</string>
+    <string name="myfragment_waimai">外卖</string>
     <string name="myfragment_collect">收藏</string>
     <string name="myfragment_current_account">现金账户</string>
     <string name="myfragment_logout">退出当前账户</string>

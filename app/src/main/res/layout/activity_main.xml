@@ -70,7 +70,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/travel" />
+                android:text="@string/search_type3" />
         </LinearLayout>
 
         <LinearLayout
@@ -93,7 +93,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/search_type2" />
+                android:text="@string/myfragment_waimai" />
         </LinearLayout>
 
         <LinearLayout
@@ -119,29 +119,29 @@
                 android:text="@string/my_title" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical">-->
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
 
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/icon_more_n" />
-            </RelativeLayout>
+                <!--<ImageView-->
+                    <!--android:layout_width="22dp"-->
+                    <!--android:layout_height="22dp"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:src="@drawable/icon_more_n" />-->
+            <!--</RelativeLayout>-->
 
-            <TextView
-                style="@style/text_66_black_small"
-                android:layout_marginTop="2dp"
-                android:text="@string/more" />
-        </LinearLayout>
+            <!--<TextView-->
+                <!--style="@style/text_66_black_small"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:text="@string/more" />-->
+        <!--</LinearLayout>-->
     </LinearLayout>
 
 </RelativeLayout>
