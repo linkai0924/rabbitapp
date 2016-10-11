@@ -218,7 +218,9 @@
     <string name="my_order_pop_all">全部</string>
     <string name="my_order_pop_group">团购</string>
     <string name="my_order_pop_daigou">代购</string>
+    <string name="my_order_pop_supermarket">超时外送</string>
     <string name="my_order_pop_hotel">酒店</string>
+    <string name="my_order_pop_dessert">甜点饮品</string>
 
     <!-- 我的订单状态弹框 -->
     <string name="my_order_pop_await_pay">待支付</string>
@@ -427,14 +429,17 @@
     <string name="my_collect">收藏列表</string>
     <string name="recent_photos">最近照片</string>
     <!-- 紧急求助 -->
-    <string name="jinjiqiuzhu">紧急求助</string>
+    <string name="qingzhen">清真</string>
     <string name="lvxingxiaomi">旅行小秘</string>
     <string name="huobiduihuan">货币兑换</string>
     <string name="zhuanxiangtese">专享特色</string>
+    <string name="yingyangkuaican">营养快餐</string>
     <string name="xiuxianyule">休闲娱乐</string>
+    <string name="pinpaizhuanqu">品牌专区</string>
     <string name="chuxingfuwu">出行服务</string>
-    <string name="suishenfanyi">随身翻译</string>
-    <string name="meishi">美食</string>
+    <string name="shuiguoxianhua">水果鲜花</string>
+    <string name="xiaoyetemai">宵夜特卖</string>
+    <string name="meishi">美食外卖</string>
     <string name="all">全部</string>
 
     <!-- 意见反馈 -->

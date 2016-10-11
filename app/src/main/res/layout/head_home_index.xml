@@ -64,7 +64,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/my_order_pop_hotel" />
+                android:text="@string/my_order_pop_dessert" />
         </LinearLayout>
 
         <View
@@ -91,7 +91,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/my_order_pop_daigou" />
+                android:text="@string/my_order_pop_supermarket" />
         </LinearLayout>
 
         <View
@@ -118,7 +118,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/chuxingfuwu" />
+                android:text="@string/shuiguoxianhua" />
         </LinearLayout>
 
         <View
@@ -126,27 +126,27 @@
             android:layout_height="20dp"
             android:layout_weight="0.3" />
 
-        <LinearLayout
-            android:id="@+id/travel_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/travel_layout"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:orientation="vertical">-->
 
-            <net.duohuo.dhroid.view.YToXImageView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:layout_marginRight="7dp"
-                android:src="@drawable/icon_lvxing"
-                my:heightToWidth="1.0" />
+            <!--<net.duohuo.dhroid.view.YToXImageView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="7dp"-->
+                <!--android:layout_marginRight="7dp"-->
+                <!--android:src="@drawable/icon_lvxing"-->
+                <!--my:heightToWidth="1.0" />-->
 
-            <TextView
-                style="@style/text_66_black_small"
-                android:layout_marginTop="2dp"
-                android:text="@string/travel" />
-        </LinearLayout>
+            <!--<TextView-->
+                <!--style="@style/text_66_black_small"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:text="@string/travel" />-->
+        <!--</LinearLayout>-->
     </LinearLayout>
 
     <LinearLayout
@@ -175,7 +175,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/xiuxianyule" />
+                android:text="@string/pinpaizhuanqu" />
         </LinearLayout>
 
         <View
@@ -202,7 +202,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/zhuanxiangtese" />
+                android:text="@string/yingyangkuaican" />
         </LinearLayout>
 
         <View
@@ -229,7 +229,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/suishenfanyi" />
+                android:text="@string/xiaoyetemai" />
         </LinearLayout>
 
         <View
@@ -256,7 +256,7 @@
             <TextView
                 style="@style/text_66_black_small"
                 android:layout_marginTop="2dp"
-                android:text="@string/jinjiqiuzhu" />
+                android:text="@string/qingzhen" />
         </LinearLayout>
 
         <View
@@ -264,27 +264,27 @@
             android:layout_height="20dp"
             android:layout_weight="0.3" />
 
-        <LinearLayout
-            android:id="@+id/all_cat"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/all_cat"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:orientation="vertical">-->
 
-            <net.duohuo.dhroid.view.YToXImageView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:layout_marginRight="7dp"
-                android:src="@drawable/icon_quanbufenlei"
-                my:heightToWidth="1.0" />
+            <!--<net.duohuo.dhroid.view.YToXImageView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="7dp"-->
+                <!--android:layout_marginRight="7dp"-->
+                <!--android:src="@drawable/icon_quanbufenlei"-->
+                <!--my:heightToWidth="1.0" />-->
 
-            <TextView
-                style="@style/text_66_black_small"
-                android:layout_marginTop="2dp"
-                android:text="@string/all_item" />
-        </LinearLayout>
+            <!--<TextView-->
+                <!--style="@style/text_66_black_small"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:text="@string/all_item" />-->
+        <!--</LinearLayout>-->
     </LinearLayout>
 
     <View
