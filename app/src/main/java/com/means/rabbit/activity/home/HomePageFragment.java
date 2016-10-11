@@ -189,9 +189,9 @@ public class HomePageFragment extends RabbitBaseFragment implements
         foodLayoutV.setOnClickListener(this);
         hotelLayoutV.setOnClickListener(this);
         redpacketLayoutV.setOnClickListener(this);
-        travel_layoutV.setOnClickListener(this);
+//        travel_layoutV.setOnClickListener(this);
         help_layoutV.setOnClickListener(this);
-        all_catV.setOnClickListener(this);
+//        all_catV.setOnClickListener(this);
         travel_servicesV.setOnClickListener(this);
         entertainmentV.setOnClickListener(this);
         exclusive_characteristicsV.setOnClickListener(this);
