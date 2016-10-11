@@ -178,9 +178,9 @@ public class HomePageFragment extends RabbitBaseFragment implements
         foodLayoutV = headV.findViewById(R.id.food_layout);
         hotelLayoutV = headV.findViewById(R.id.hotel_layout);
         redpacketLayoutV = headV.findViewById(R.id.redpacket);
-        travel_layoutV = headV.findViewById(R.id.travel_layout);
+//        travel_layoutV = headV.findViewById(R.id.travel_layout);
         help_layoutV = headV.findViewById(R.id.help_layout);
-        all_catV = headV.findViewById(R.id.all_cat);
+//        all_catV = headV.findViewById(R.id.all_cat);
         travel_servicesV = headV.findViewById(R.id.travel_services);
         entertainmentV = headV.findViewById(R.id.entertainment);
         exclusive_characteristicsV = headV
@@ -278,7 +278,7 @@ public class HomePageFragment extends RabbitBaseFragment implements
         Intent it;
 
         switch (v.getId()) {
-            // 美食
+            // 美食外卖
             case R.id.food_layout:
                 it = new Intent(getActivity(), FoodListActivity.class);
                 it.putExtra("title", getString(R.string.meishi));
@@ -286,30 +286,30 @@ public class HomePageFragment extends RabbitBaseFragment implements
                 startActivity(it);
                 break;
 
-            // 出行服务
+            // 水果鲜花
             case R.id.travel_services:
                 it = new Intent(getActivity(), FoodListActivity.class);
-                it.putExtra("title", getString(R.string.chuxingfuwu));
+                it.putExtra("title", getString(R.string.shuiguoxianhua));
                 it.putExtra("catid", "4");
                 startActivity(it);
                 break;
 
-            // 休闲娱乐
+            // 品牌专区
             case R.id.entertainment:
                 it = new Intent(getActivity(), FoodListActivity.class);
-                it.putExtra("title", getString(R.string.xiuxianyule));
+                it.putExtra("title", getString(R.string.pinpaizhuanqu));
                 it.putExtra("catid", "6");
                 startActivity(it);
                 break;
 
-            // 专享特色
+            // 营养快餐
             case R.id.exclusive_characteristics:
                 it = new Intent(getActivity(), FoodListActivity.class);
-                it.putExtra("title", getString(R.string.zhuanxiangtese));
+                it.putExtra("title", getString(R.string.yingyangkuaican));
                 it.putExtra("catid", "7");
                 startActivity(it);
                 break;
-            // 代购
+            // 超市外送
             case R.id.daigou:
                 it = new Intent(getActivity(), DaiGouActivity.class);
                 // it.putExtra("title", getString(R.string.huobiduihuan));
@@ -317,36 +317,26 @@ public class HomePageFragment extends RabbitBaseFragment implements
                 startActivity(it);
                 break;
 
+            //甜点饮品
             case R.id.hotel_layout:
                 it = new Intent(getActivity(), HotelListActivity.class);
                 startActivity(it);
                 break;
 
-            // 随身翻译
+            // 宵夜特卖
             case R.id.redpacket:
                 it = new Intent(getActivity(), TranslateActivity.class);
                 startActivity(it);
                 break;
 
-            // 旅行小秘
-            case R.id.travel_layout:
-                it = new Intent(getActivity(), TravelActivity.class);
-                it.putExtra("title", getString(R.string.lvxingxiaomi));
-                it.putExtra("catid", "5");
-                startActivity(it);
-                break;
-
+            //清真
             case R.id.help_layout:
                 it = new Intent(getActivity(), TravelActivity.class);
-                it.putExtra("title", getString(R.string.jinjiqiuzhu));
+                it.putExtra("title", getString(R.string.qingzhen));
                 it.putExtra("catid", "8");
                 startActivity(it);
                 break;
 
-            case R.id.all_cat:
-                it = new Intent(getActivity(), AllItemActivity.class);
-                startActivity(it);
-                break;
             default:
                 break;
         }
