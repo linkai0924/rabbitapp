@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_order_pop_dessert">dessert</string>
+    <string name="my_order_pop_supermarket">SupertMarket</string>
+    <string name="pinpaizhuanqu">Brand</string>
+    <string name="qingzhen">Muslim</string>
+    <string name="shuiguoxianhua">FruitFlower</string>
+    <string name="xiaoyetemai">Night snack</string>
+    <string name="yingyangkuaican">FastFood</string>
+</resources>

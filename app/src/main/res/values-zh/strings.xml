@@ -518,5 +518,12 @@
     <string name="recharge_des">请输入充值金额!</string>
     <string name="recharge_des1">充值金额不能为0!</string>
     <string name="recharge_success">充值成功!</string>
+    <string name="my_order_pop_dessert">甜点饮品</string>
+    <string name="my_order_pop_supermarket">超时外送</string>
+    <string name="pinpaizhuanqu">品牌专区</string>
+    <string name="qingzhen">清真</string>
+    <string name="shuiguoxianhua">水果鲜花</string>
+    <string name="xiaoyetemai">宵夜特卖</string>
+    <string name="yingyangkuaican">FastFood</string>
 
 </resources>

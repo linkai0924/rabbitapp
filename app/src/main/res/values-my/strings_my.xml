@@ -491,7 +491,7 @@
 
     <!-- 旅行小秘 -->
     <string name="travel_des">Baca</string>
-    <string name="travel_time"></string>
+    <string name="travel_time">travel_time</string>
 
     <!-- 商家订单 -->
     <string name="business_order_des">Input consumption code</string>

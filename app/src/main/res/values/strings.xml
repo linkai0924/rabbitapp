@@ -218,7 +218,7 @@
     <string name="my_order_pop_all">全部</string>
     <string name="my_order_pop_group">团购</string>
     <string name="my_order_pop_daigou">代购</string>
-    <string name="my_order_pop_supermarket">超时外送</string>
+    <string name="my_order_pop_supermarket">超市外送</string>
     <string name="my_order_pop_hotel">酒店</string>
     <string name="my_order_pop_dessert">甜点饮品</string>
 
@@ -524,5 +524,7 @@
     <string name="recharge_des">请输入充值金额!</string>
     <string name="recharge_des1">充值金额不能为0!</string>
     <string name="recharge_success">充值成功!</string>
+    <string name="jinjiqiuzhu">紧急求助</string>
+    <string name="suishenfanyi">随身翻译</string>
 
 </resources>
