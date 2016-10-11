@@ -91,8 +91,7 @@ public class MainActivity extends FragmentActivity {
     protected void onResume() {
         // TODO Auto-generated method stub
         super.onResume();
-        RabbitPerference per = IocContainer.getShare().get(
-                RabbitPerference.class);
+        RabbitPerference per = IocContainer.getShare().get(RabbitPerference.class);
         per.load();
         if (TextUtils.isEmpty(per.cityname)) {
             Intent it = new Intent(MainActivity.this, SelectCityActivity.class);

@@ -41,13 +41,11 @@
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="f253a2ddd7b995a06543d048b8c61a4c" />
-
         <activity
             android:name=".activity.main.SplashActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -57,64 +55,64 @@
             android:launchMode="singleTask" />
         <activity
             android:name=".activity.my.edit.EditInfoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
             android:name=".activity.my.edit.EditEmailActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"></activity>
-        <activity android:name=".activity.my.SystemMsgActivity"></activity>
-        <activity android:name=".activity.my.order.MyOrderActivity"></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".activity.my.SystemMsgActivity" />
+        <activity android:name=".activity.my.order.MyOrderActivity" />
         <activity
             android:name=".activity.my.order.BusinessTuanGouOrderDetailsActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity
             android:name=".activity.order.BusinessDaigouOrderDetailActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
-        <activity android:name=".activity.merchants.FoodListActivity"></activity>
-        <activity android:name=".activity.my.ShippingAddressActivity"></activity>
-        <activity android:name=".activity.my.AddShippingAddressActivity"></activity>
-        <activity android:name=".activity.my.MyCollectActivity"></activity>
-        <activity android:name=".activity.my.MyIntegralActivity"></activity>
-        <activity android:name=".activity.merchants.DaiGouActivity"></activity>
-        <activity android:name=".activity.merchants.HotelListActivity"></activity>
-        <activity android:name=".activity.home.TranslateActivity"></activity>
-        <activity android:name=".activity.home.SelectLanguageActivity"></activity>
-        <activity android:name=".activity.home.SelectCityActivity"></activity>
-        <activity android:name=".activity.merchants.ShopDetailActivity"></activity>
-        <activity android:name=".activity.merchants.HotelDetailActivity"></activity>
-        <activity android:name=".activity.merchants.GoodDetailActivity"></activity>
-        <activity android:name=".activity.travel.TravelActivity"></activity>
-        <activity android:name=".activity.main.HelpActivity"></activity>
-        <activity android:name=".activity.travel.TravelDetailActivity"></activity>
-        <activity android:name=".activity.home.AllItemActivity"></activity>
-        <activity android:name=".activity.my.LoginActivity"></activity>
-        <activity android:name=".activity.my.RegisterActivity"></activity>
-        <activity android:name=".activity.my.edit.ForgetPswdActivity"></activity>
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".activity.merchants.FoodListActivity" />
+        <activity android:name=".activity.my.ShippingAddressActivity" />
+        <activity android:name=".activity.my.AddShippingAddressActivity" />
+        <activity android:name=".activity.my.MyCollectActivity" />
+        <activity android:name=".activity.my.MyIntegralActivity" />
+        <activity android:name=".activity.merchants.DaiGouActivity" />
+        <activity android:name=".activity.merchants.HotelListActivity" />
+        <activity android:name=".activity.home.TranslateActivity" />
+        <activity android:name=".activity.home.SelectLanguageActivity" />
+        <activity android:name=".activity.home.SelectCityActivity" />
+        <activity android:name=".activity.merchants.ShopDetailActivity" />
+        <activity android:name=".activity.merchants.HotelDetailActivity" />
+        <activity android:name=".activity.merchants.GoodDetailActivity" />
+        <activity android:name=".activity.travel.TravelActivity" />
+        <activity android:name=".activity.main.HelpActivity" />
+        <activity android:name=".activity.travel.TravelDetailActivity" />
+        <activity android:name=".activity.home.AllItemActivity" />
+        <activity android:name=".activity.my.LoginActivity" />
+        <activity android:name=".activity.my.RegisterActivity" />
+        <activity android:name=".activity.my.edit.ForgetPswdActivity" />
         <!--<activity android:name=".activity.order.pay.FavorableMainPayActivity" >-->
         <!--</activity>-->
         <activity
             android:name=".activity.order.BusinessHotelOrderDetailActivity"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
-        <activity android:name=".activity.my.order.BusinessOrderActivity"></activity>
-        <activity android:name=".activity.order.GroupOrderActivity"></activity>
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".activity.my.order.BusinessOrderActivity" />
+        <activity android:name=".activity.order.GroupOrderActivity" />
         <!--<activity android:name=".activity.order.pay.FavorableMainDetailActivity" >-->
         <!--</activity>-->
-        <activity android:name=".activity.order.AddShopOrderActivity"></activity>
-        <activity android:name=".activity.order.AddFavorableMainActivity"></activity>
+        <activity android:name=".activity.order.AddShopOrderActivity" />
+        <activity android:name=".activity.order.AddFavorableMainActivity" />
         <activity android:name=".activity.my.CommentListActivity" />
-        <activity android:name=".activity.order.TakeAwayOrderActivity"></activity>
-        <activity android:name=".activity.order.pay.GroupPayActivity"></activity>
-        <activity android:name=".activity.order.pay.HotelOrderDetailActivity"></activity>
-        <activity android:name=".activity.order.pay.TakeAwayPayActivity"></activity>
-        <activity android:name=".activity.order.InsteadShoppingActivity"></activity>
-        <activity android:name=".activity.order.pay.InsteadShoppingPayActivity"></activity>
-        <activity android:name=".activity.my.edit.EditNickNameActivity"></activity>
-        <activity android:name=".activity.my.edit.EditPhoneActivity"></activity>
-        <activity android:name=".activity.more.AboutUsActivity"></activity>
-        <activity android:name=".activity.more.HelpListActivity"></activity>
-        <activity android:name=".activity.more.HelpDetailActivity"></activity>
+        <activity android:name=".activity.order.TakeAwayOrderActivity" />
+        <activity android:name=".activity.order.pay.GroupPayActivity" />
+        <activity android:name=".activity.order.pay.HotelOrderDetailActivity" />
+        <activity android:name=".activity.order.pay.TakeAwayPayActivity" />
+        <activity android:name=".activity.order.InsteadShoppingActivity" />
+        <activity android:name=".activity.order.pay.InsteadShoppingPayActivity" />
+        <activity android:name=".activity.my.edit.EditNickNameActivity" />
+        <activity android:name=".activity.my.edit.EditPhoneActivity" />
+        <activity android:name=".activity.more.AboutUsActivity" />
+        <activity android:name=".activity.more.HelpListActivity" />
+        <activity android:name=".activity.more.HelpDetailActivity" />
         <activity
             android:name=".activity.comment.PostCommentMainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <!--<activity-->
         <!--android:name=".BasePhotoPreviewActivityBasePhotoPreviewActivity"-->
         <!--android:configChanges="orientation|keyboardHidden|screenSize" >-->
@@ -122,21 +120,21 @@
         <activity
             android:name=".activity.main.PhotoPreviewActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.merchants.TuangouDetailActivity"></activity>
-        <activity android:name=".activity.finance.FinancialManagementActivity"></activity>
-        <activity android:name=".activity.order.pay.PayOrderActivity"></activity>
-        <activity android:name=".activity.finance.WithdrawCardActivity"></activity>
-        <activity android:name=".activity.finance.RechargeActivity"></activity>
-        <activity android:name=".activity.finance.FinanceDetailActivity"></activity>
-        <activity android:name=".activity.home.SelectDistrictActivity"></activity>
-        <activity android:name=".activity.merchants.GraphicDetailActivity"></activity>
-        <activity android:name=".activity.more.FeedbackActivity"></activity>
-        <activity android:name=".activity.main.SearchActivity"></activity>
-        <activity android:name=".activity.main.ErweimaActivity"></activity>
-        <activity android:name=".activity.merchants.TuangouActivity"></activity>
-        <activity android:name=".activity.main.MapActivity"></activity>
-        <activity android:name="com.means.rabbit.activity.merchants.GuessLikeActivity"></activity>
-        <activity android:name="com.google.zxing.client.android.CaptureActivity"></activity>
+        <activity android:name=".activity.merchants.TuangouDetailActivity" />
+        <activity android:name=".activity.finance.FinancialManagementActivity" />
+        <activity android:name=".activity.order.pay.PayOrderActivity" />
+        <activity android:name=".activity.finance.WithdrawCardActivity" />
+        <activity android:name=".activity.finance.RechargeActivity" />
+        <activity android:name=".activity.finance.FinanceDetailActivity" />
+        <activity android:name=".activity.home.SelectDistrictActivity" />
+        <activity android:name=".activity.merchants.GraphicDetailActivity" />
+        <activity android:name=".activity.more.FeedbackActivity" />
+        <activity android:name=".activity.main.SearchActivity" />
+        <activity android:name=".activity.main.ErweimaActivity" />
+        <activity android:name=".activity.merchants.TuangouActivity" />
+        <activity android:name=".activity.main.MapActivity" />
+        <activity android:name="com.means.rabbit.activity.merchants.GuessLikeActivity" />
+        <activity android:name="com.google.zxing.client.android.CaptureActivity" />
 
         <service
             android:name="com.paypal.android.sdk.payments.PayPalService"
