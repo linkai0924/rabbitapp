@@ -7,4 +7,7 @@
     <string name="shuiguoxianhua">FruitFlower</string>
     <string name="xiaoyetemai">Night snack</string>
     <string name="yingyangkuaican">FastFood</string>
+    <string name="look_more">more</string>
+    <string name="myfragment_waimai">waimai</string>
+    <string name="progress_nomoreresult">test</string>
 </resources>

@@ -526,5 +526,16 @@
     <string name="recharge_success">充值成功!</string>
     <string name="jinjiqiuzhu">紧急求助</string>
     <string name="suishenfanyi">随身翻译</string>
+    <string name="look_Lebih">Lebih</string>
+    <string name="Lebih_about_us">about_us</string>
+    <string name="Lebih_feedback">feedback</string>
+    <string name="Lebih_help">help</string>
+    <string name="Lebih_langswitcher">langswitcher</string>
+    <string name="Lebih_richscan">richscan</string>
+    <string name="Lebih_version_updating">update</string>
+    <string name="Lebih_wipe_cache">wipecache</string>
+    <string name="myfragment_log_keluar">log keluar</string>
+    <string name="progress_noLebihresult">test</string>
+    <string name="progress_nomoreresult">test</string>
 
 </resources>

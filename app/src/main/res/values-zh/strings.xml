@@ -525,5 +525,17 @@
     <string name="shuiguoxianhua">水果鲜花</string>
     <string name="xiaoyetemai">宵夜特卖</string>
     <string name="yingyangkuaican">FastFood</string>
+    <string name="look_Lebih">Lebih</string>
+    <string name="Lebih_about_us">about_us</string>
+    <string name="Lebih_feedback">feedback</string>
+    <string name="Lebih_help">help</string>
+    <string name="Lebih_langswitcher">langswitcher</string>
+    <string name="Lebih_richscan">richscan</string>
+    <string name="Lebih_version_updating">update</string>
+    <string name="Lebih_wipe_cache">wipecache</string>
+    <string name="myfragment_log_keluar">log keluar</string>
+    <string name="myfragment_waimai">waimai</string>
+    <string name="progress_noLebihresult">test</string>
+    <string name="progress_nomoreresult">test</string>
 
 </resources>
